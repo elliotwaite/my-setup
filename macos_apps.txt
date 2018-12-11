@@ -1,0 +1,44 @@
+These are all the apps I have installed.
+
+Ableton Live Suite 9
+Adobe Creative Cloud
+Adobe Lightroom Classic CC
+Adobe Photoshop CC 2019
+Aria Maestosa
+Astropad Studio
+BetterTouchTool (settings above)
+Compressor (settings above)
+Discord
+eLicenser Control Center
+Evoluent
+Final Cut Pro (settings above)
+Firefox
+Flux
+foolcontrol
+Google Chrome
+Google Chrome Canary
+iA Writer
+iLok License Manager
+Neat Video v4 for Final Cut
+iStat Menus
+iTerm
+iZotope RX 7 Audio Editor
+Karabiner-Elements
+Karabiner-EventViewer
+Keyboard Maestro
+Loopback
+LutCreatorMac
+Max
+MediaHuman Audio Converter
+MediaHuman YouTube Downloader
+Neat Video v4 for Final Cut
+OBS
+PyCharm
+Spectacle
+Steam
+StreamLabels
+Sublime Text
+Textual
+Transmit
+VLC
+ZhiyunGimbalTools

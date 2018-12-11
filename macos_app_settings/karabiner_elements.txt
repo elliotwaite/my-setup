@@ -1,0 +1,15 @@
+Place "karabiner.json" (located in the same folder as this text file) in the following location on your Mac: ~/.config/karabiner/karabiner.json
+
+This will remap the following keys:
+  Caps Lock: F20 (used by Keyboard Maestro to trigger a Google search)
+  Cmd + I: Up
+  Cmd + K: Down
+  Cmd + J: Left
+  Cmd + L: Right
+  Cmd + U: Alt + Left
+  Cmd + O: Alt + Right
+  Cmd + H: Cmd + Left
+  Cmd + ;: Cmd + Right
+  Cmd + ': Cmd + Right
+
+I set both "Cmd + ;" and "Cmd + '" to "Cmd + Right" because I seem to use both of them intuitively in different situations.

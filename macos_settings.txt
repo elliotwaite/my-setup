@@ -1,0 +1,40 @@
+For new computers:
+  Delete all extra MacOS apps: Garage Band, iMovie, Keynote, Numbers, Pages, etc.
+  Update all apps through the App Store (multiple times if needed).
+
+System Preferences:
+  Dock
+    [x] Automatically hide and show the Dock
+  Displays
+    Display > Resolution: Scaled (middle one)
+  Trackpad
+    [x] Tap to click
+
+Finder Preferences:
+  General
+    Show these items on the desktop: uncheck all.
+    New Finder windows show: Downloads
+  Sidebar
+    AirDrop, Applications, Downloads, elliotwaite, Hard disks, External disks, CDs, DVDs, and iPods
+  Advanced
+    [x] Keep folders on top when sorting by name
+  Show hidden files: Cmd + Shift + .
+
+Dock Apps:
+  Finder
+  Google Chrome
+  PyCharm
+  Sublime Text
+  iTerm
+  Adobe Photoshop CC 2019
+  iA Writer
+  Final Cut Pro
+  foolcontrol
+  LutCreatorMac
+  QuickTime Player
+  Notes
+  Ableton Live 9 Suite
+  System Preferences
+  |
+  Applications (Sort by: Name, Display as: Folder, View content as: Grid)
+  Trash

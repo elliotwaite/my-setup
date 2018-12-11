@@ -1,0 +1,15 @@
+Import the macros in "keyboard_maestro_macros.kmmacros" (located in the same folder as this text file).
+
+This will add the following macros:
+
+  Global Macros:
+    F20: New Google Search in a new Chrome tab
+    Cmd + F20: New YouTube Search in a new Chrome tab
+    Alt + F20: New PyTorch Search in a new Chrome tab
+    (note: I map Caps Lock to F20 using Karabiner.)
+
+  PyCharm Macros:
+    Cmd + Left: Home
+    Cmd + Right: End
+    Shift + Delete: Alt + Delete, Delete, Space
+    (note: Home and End work better than the Cmd + Left/Right in PyCharm's terminal, and I use Shift + Delete to clear the line and go the the end of the previous line.)

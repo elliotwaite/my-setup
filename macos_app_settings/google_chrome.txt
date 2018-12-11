@@ -1,0 +1,11 @@
+Right click Chrome search box > Edit Search Engines...
+
+Add these two:
+
+  Search engine: YouTube Video Search
+  Keyword: y
+  URL with %s in place of query: http://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch
+
+  Search engine: PyTorch
+  Keyword: p
+  URL with %s in place of query: https://pytorch.org/docs/0.1.12/search.html?q=%s&check_keywords=yes&area=default#

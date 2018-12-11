@@ -1,0 +1,2 @@
+I use this app to setup custom snap areas for window positioning. I setup the snap ares to only show while holding Cmd by using this setting when creating a new snap area:
+  Only show snap area while holding: [x] Cmd

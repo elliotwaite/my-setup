@@ -1,0 +1,52 @@
+These are the settings I use to convert a video into an optimal format for Instagram.
+
+Click the plus button at the bottom left > New Setting...
+  Format: MPEG-4
+  Name: Instagram
+
+Then set it to these settings:
+
+  General
+    Name: Instagram
+    Description: MPEG-4
+    Default location: None
+    Format: Video and Audio
+    [x] Optimize for network use
+    Set duration to: 100.00%
+    [ ] Embed CEA-608 captions
+
+  Video
+    Frame size: Up to 640 x 360
+    Pixel aspect ratio: Default for Frame Size
+    Frame rate: Automatic
+    Field order: Progressive
+    Color space: Rec. 709
+    Codec: H.264
+    Profile: Main
+    Entropy mode: CABAC
+    Key frame interval: 0 [x] Automatic
+    Data rate: Custom
+    3,500 kbps
+    [x] Multi-pass
+    [x] Allow frame reordering
+    360 metadata: None
+    Cropping: Custom
+    0, 0, 0, 0
+    Padding: 4x3 1.33:1
+    0, 0, 0, 0
+    Resize filter: Anti aliased (Best)
+    Retiming quality: Good (Frame Blending)
+    [ ] Adaptive details
+    Anti-aliasing level: 0
+    Details level: 0
+    [ ] Dithering
+
+  Audio
+    Channel layout: Mono
+    Sample rate: 44.1 kHz
+    Sample size: Automatic
+    Format: AAc
+    Quality: High
+    Bit rate: 160
+    Bit rate strategy: Constant Bit Rate
+

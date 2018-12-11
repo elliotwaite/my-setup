@@ -1,0 +1,19 @@
+I use the following settings and key bindings for Sublime Text.
+
+Sublime Text > Preferences > Settings (Cmd + ,):
+{
+	"font_size": 13,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}
+
+Sublime Text > Preferences > Key Bindings:
+[
+  { "keys": ["super+g"], "command": "find_under_expand" },
+  { "keys": ["super+shift+up"], "command": "swap_line_up" },
+  { "keys": ["super+shift+down"], "command": "swap_line_down" },
+  { "keys": ["shift+up"], "command": "swap_line_up" },
+  { "keys": ["shift+down"], "command": "swap_line_down" },
+  { "keys": ["super+d"], "command": "duplicate_line" },
+  { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+]

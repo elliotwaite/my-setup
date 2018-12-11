@@ -1,0 +1,15 @@
+These are the plugin chains I use for mixing my vocals.
+
+Boom Mic:
+  RX 6 Mouth De-click (Preset: Transparent Removal)
+  RX 6 De-essing (Preset: Surgical De-essing)
+  FabFilter Pro-Q 2 (Preset: Vocal, Oversampling: 4x)
+  FabFilter Pro-C 2 (Preset: Pro Voice Over bM, Threshold: -36 (level of quietest vocals))
+
+Master:
+  FF Pro-L 2 (Preset: Safe > Podcasts & Broadcast Voiceovers, Oversampling: 4x, Dither: 16 Bits (Noise Shaping: Optimized, make sure Ableton Live export dithering is off), adjust gain to target -14 LUFS (Streaming) (+15))
+
+Twitch:
+  FabFilter Pro-Q 2 (Preset: Vocal, Disable: Low Cut and Low Shelf)
+  FabFilter Pro-C 2 (Preset: Pro Voice Over bM, default gain)
+  FF Pro-L 2 (Preset: Safe > Podcasts & Broadcast Voiceovers, Gain: +7.0)

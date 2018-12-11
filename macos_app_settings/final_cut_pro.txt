@@ -1,0 +1,19 @@
+My Final Cut Pro keyboard commands.
+
+Final Cut Pro > Commands > Customize... (Alt + Cmd + K):
+  Blade: C
+  Enable/Disable Clip: B
+  Go to Next Frame: S
+  Go to Previous Frame: F
+  Play Rate 2: R
+  Play Rate 4: Y
+  Redo Changes: Shift + Z
+  Snapping: 5
+  Trim End: V
+  Trim Start: X
+  Trim Tool: T
+  Undo Changes: Z
+  Zoom In: E
+  Zoom Out: D
+  Zoom to Fit: Cmd + D
+  Zoom to Samples: Cmd + E
