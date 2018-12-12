@@ -4,3 +4,6 @@ Live > Preferences...
   File / Folder
     Sample Editor: /Applications/iZotope RX 7 Audio Editor.app/
     Use VST Plug-In System Folders: On
+  Record / Warp / Launch
+    Loop/Warp Short Sample: Unwarped One Shot
+    Auto-Warp Long Samples: Off
