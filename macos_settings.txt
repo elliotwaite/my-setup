@@ -30,6 +30,10 @@ System Preferences:
   Users & Groups:
     Login Items:
       BetterTouchTool
+      Cursorcerer
+      Flux
+      Keyboard Maestro Engine
+      Spectacle
   Date & Time:
     Clock > Time options > [ ] Show AM/PM
     Clock > Date options > [x] Show date
