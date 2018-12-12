@@ -1,8 +1,8 @@
-Sublime Text > Preferences > Settings (Cmd + ,):
+Sublime Text > Preferences > Settings:
 {
-	"font_size": 13,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true
+  "font_size": 13,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true
 }
 
 Sublime Text > Preferences > Key Bindings:
@@ -15,3 +15,5 @@ Sublime Text > Preferences > Key Bindings:
   { "keys": ["super+d"], "command": "duplicate_line" },
   { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 ]
+
+View > Hide Minimap

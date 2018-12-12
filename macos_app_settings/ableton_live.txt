@@ -1,0 +1,6 @@
+Live > Preferences...
+  Audio
+    In/Out Sample Rate: 48000
+  File / Folder
+    Sample Editor: /Applications/iZotope RX 7 Audio Editor.app/
+    Use VST Plug-In System Folders: On

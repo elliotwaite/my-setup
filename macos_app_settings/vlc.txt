@@ -1,0 +1,31 @@
+VLC > Preferences...
+  Interface
+    [ ] Display VLC status menu icon
+    [ ] Control playback with the Apple Remote
+    [x] Automatically check for updates
+  Audio
+    [x] Keep audio level between sessions.
+  Video
+    [x] Start in fullscreen
+    [x] Use the native fullscreen mode
+  Subtitles / OSD
+    [ ] Enable OSD
+  Hotkeys
+    Fullscreen: F
+    Faster: D
+    Slower: S
+    Normal rate: R
+    Next: N
+    Previous: P
+    Very short backwards jump: Z
+    Very short forwards jump: A
+    Short backwards jump: Left
+    Short forwards jump: Right
+    Medium backwards jump: Alt + Left
+    Medium forwards jump: Alt + Right
+    Long backwards jump: Cmd + Left
+    Long forwards jump: Cmd + Right
+    Next frame: .
+    Volume up: Up
+    Volume down: Down
+    Mute: M

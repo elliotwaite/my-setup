@@ -5,6 +5,7 @@ For new computers:
 System Preferences:
   Dock:
     [x] Automatically hide and show the Dock
+    [ ] Show recent applications in Dock
   Displays:
     Display > Resolution: Scaled (middle one)
     [ ] Show mirroring options in the menu bar when available

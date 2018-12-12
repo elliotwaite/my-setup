@@ -1,0 +1,13 @@
+Preferences...
+
+Center: Alt + Cmd + C
+Fullscreen: Alt + Cmd + F
+
+Left Half: Alt + Cmd + Left
+Right Half: Alt + Cmd + Right
+
+(remove all other shortcuts)
+
+[x] Launch Spectacle at Login
+
+Click bottom right arrow > Run...: as a background application

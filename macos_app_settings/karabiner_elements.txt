@@ -13,3 +13,5 @@ This will remap the following keys:
   Cmd + ': Cmd + Right
 
 I set both "Cmd + ;" and "Cmd + '" to "Cmd + Right" because I seem to use both of them intuitively in different situations.
+
+Also, go to "Karabiner-Elements Preferences > Devices", and under Caps Lock LED, uncheck all of the Manipulate LED options.

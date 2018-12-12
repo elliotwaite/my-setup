@@ -31,7 +31,7 @@ foolcontrol
 Google Chrome
 Google Chrome Canary
 iA Writer
-Neat Video v4 for Final Cut
+iLok License Manager (for Eventide Blackhole)
 iStat Menus
 iTerm
 iZotope RX 7 Audio Editor
@@ -44,19 +44,18 @@ Max
 MediaHuman Audio Converter
 MediaHuman YouTube Downloader
 Neat Video v4 for Final Cut
-OBS
 PyCharm
 Spectacle
-Steam
-StreamLabels
 Sublime Text
-Textual
 VLC
-ZhiyunGimbalTools
 
 Optional:
 Adobe Lightroom Classic CC
 Astropad Studio
 eLicenser Control Center
-iLok License Manager
+Loopback
+OBS
+StreamLabels
+Textual
 Transmit
+ZhiyunGimbalTools

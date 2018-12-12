@@ -1,4 +1,7 @@
-Import the macros in "keyboard_maestro_macros.kmmacros" (located in the same folder as this text file).
+Download "keyboard_maestro_macros.kmmacros" (located in the same folder as this text file).
+Delete all existing macro groups.
+File > Import Macros Disables... > (locate the keyboard_maestro_macros.kmmacros file)
+Enable all the imported macros.
 
 This will add the following macros:
 
@@ -13,3 +16,12 @@ This will add the following macros:
     Cmd + Right: End
     Shift + Delete: Alt + Delete, Delete, Space
     (note: Home and End work better than the Cmd + Left/Right in PyCharm's terminal, and I use Shift + Delete to clear the line and go the the end of the previous line.)
+
+Also, go to Keyboard Maestro > Preferences...
+  General
+    [x] Launch Engine at Login
+    [ ] Detect (and Conceal) Possible Passwords
+    Display Status Menu: Never
+    [ ] Include Paste in Status Menu
+    [ ] Save Recent Applications Between Launches
+    Send Diagnostics: Never

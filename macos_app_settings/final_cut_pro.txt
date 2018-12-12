@@ -1,4 +1,4 @@
-Final Cut Pro > Commands > Customize... (Alt + Cmd + K):
+Final Cut Pro > Commands > Customize...
   Blade: C
   Enable/Disable Clip: B
   Go to Next Frame: S
