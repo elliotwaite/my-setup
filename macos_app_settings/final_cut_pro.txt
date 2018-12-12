@@ -1,5 +1,3 @@
-My Final Cut Pro keyboard commands.
-
 Final Cut Pro > Commands > Customize... (Alt + Cmd + K):
   Blade: C
   Enable/Disable Clip: B

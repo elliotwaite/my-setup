@@ -1,24 +1,36 @@
 These are all the apps I have installed.
 
 Ableton Live Suite 9
-Adobe Creative Cloud
-Adobe Lightroom Classic CC
+  Plug-ins:
+  Eventide Blackhole
+  u-he ACE
+  u-he Bazille
+  u-he Diva
+  u-he Hive
+  u-he Repro-1
+  u-he Zebra2
+  u-he Zebralette
+  u-he Zebrify
+  u-he ZRev
+  FabFilter Pro-C 2
+  FabFilter Pro-G
+  FabFilter Pro-L 2
+  FabFilter Pro-Q 2
+  RX 7
 Adobe Photoshop CC 2019
 Aria Maestosa
-Astropad Studio
-BetterTouchTool (settings above)
-Compressor (settings above)
+BetterTouchTool
+Compressor
+Cursorcerer
 Discord
-eLicenser Control Center
 Evoluent
-Final Cut Pro (settings above)
+Final Cut Pro
 Firefox
 Flux
 foolcontrol
 Google Chrome
 Google Chrome Canary
 iA Writer
-iLok License Manager
 Neat Video v4 for Final Cut
 iStat Menus
 iTerm
@@ -39,6 +51,12 @@ Steam
 StreamLabels
 Sublime Text
 Textual
-Transmit
 VLC
 ZhiyunGimbalTools
+
+Optional:
+Adobe Lightroom Classic CC
+Astropad Studio
+eLicenser Control Center
+iLok License Manager
+Transmit

@@ -1,24 +1,61 @@
 For new computers:
   Delete all extra MacOS apps: Garage Band, iMovie, Keynote, Numbers, Pages, etc.
-  Update all apps through the App Store (multiple times if needed).
+  Update all apps through the App Store (in the Updates section and Featured section for the latest OS, multiple times if needed).
 
 System Preferences:
-  Dock
+  Dock:
     [x] Automatically hide and show the Dock
-  Displays
+  Displays:
     Display > Resolution: Scaled (middle one)
-  Trackpad
+    [ ] Show mirroring options in the menu bar when available
+  Energy Saver:
+    [x] Automatic graphics switching
+    Battery:
+      Turn display off after: 1 hr
+      [x] Put hard disks to sleep when possible
+      [ ] Slightly dim the display while on battery
+      [ ] Enable Power Nap while on battery power
+      [ ] Show battery status in menu bar (replaced with iStat Menus)
+    Power Adapter:
+      Turn display off after: Never
+      [x] Prevent computer from sleeping automatically when the display is off
+      [x] Put hard disks to sleep when possible
+      [ ] Wake for Wi-Fi network access
+      [ ] Enable Power Nap while on battery power
+    [ ] Show battery status in menu bar (replaced with iStat Menus)
+  Trackpad:
     [x] Tap to click
+    [ ] Force Click and haptic feedback
+  Users & Groups:
+    Login Items:
+      BetterTouchTool
+  Date & Time:
+    Clock > Time options > [ ] Show AM/PM
+    Clock > Date options > [x] Show date
+  Cursorcerer (must be installed):
+    Toggle cursor hotkey: (None)
+    Hide idle cursor after: 2.5 sec
+    [x] Always show cursor if moved
+
 
 Finder Preferences:
-  General
+  General:
     Show these items on the desktop: uncheck all.
     New Finder windows show: Downloads
-  Sidebar
-    AirDrop, Applications, Downloads, elliotwaite, Hard disks, External disks, CDs, DVDs, and iPods
-  Advanced
+  Sidebar:
+    AirDrop, Applications, Downloads, elliotwaite, Hard disks, External disks
+  Advanced:
     [x] Keep folders on top when sorting by name
   Show hidden files: Cmd + Shift + .
+  Sidebar Favorites:
+    Applications
+    Downloads
+    elliotwaite (home folder)
+    code
+    ai
+    youtube
+    videos
+    AirDrop
 
 Dock Apps:
   Finder

@@ -1,0 +1,65 @@
+Global
+  Update Frequency: Very Slow
+  Dropdowns: Black
+
+Notifications
+  [x] Show a banner | Battery Time Remaining | 10 minutes
+
+Weather (off)
+
+CPU & GPU
+  Active Items:
+    CPU (label)
+    History Graph (CPU)
+      Width: 9px
+      [x] Show breakdowns
+    CPU Cores
+      [x] Show breakdowns
+    GPU (label)
+    History Graph (GPU)
+      Display: Processor
+      Width: 9px
+    History Graph (GPU)
+        Display: Memory
+        Width: 9px
+  App usage format: 0-100%
+  Processes to show: 15
+
+Memory
+  Active Items:
+    MEM (label)
+    Pie Graph
+      Display: Memory
+      [x] Show breakdowns
+  Processes to show: 15
+
+Disks
+  Active Items:
+    SSD (label)
+    Disk Activity
+      Width: 9px
+    Disk Space
+  Processes to show: 15
+
+Networks
+  Active Items:
+    NET (label)
+    Bandwidth
+      Width: 9px
+      [x] Show background
+    Disk Space
+  Processes to show: 15
+
+Sensors
+  Active Items:
+    Sensors (two rows)
+  Sensors to show in Menubar:
+    CPU PECI, Radeon GPU Proximity
+
+Battery/Power
+  Active Items:
+    Battery Graph (black and white, vertical)
+
+Time (off)
+
+Combined (off)

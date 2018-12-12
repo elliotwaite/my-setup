@@ -1,5 +1,3 @@
-I use the following settings and key bindings for Sublime Text.
-
 Sublime Text > Preferences > Settings (Cmd + ,):
 {
 	"font_size": 13,

@@ -1,0 +1,7 @@
+iTerm2 > Preferences... (Cmd + ,)
+
+  General
+    Closing
+      [ ] Confirm closing multiple sessions
+      [ ] Confirm "Quit iTerm2 (Cmd + Q)" if windows open
+  Profiles
