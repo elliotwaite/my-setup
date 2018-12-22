@@ -50,6 +50,7 @@ Finder Preferences:
   Sidebar:
     AirDrop, Applications, Downloads, elliotwaite, Hard disks, External disks
   Advanced:
+    [x] Show all filename extensions
     [x] Keep folders on top when sorting by name
   Show hidden files: Cmd + Shift + .
   Sidebar Favorites:
