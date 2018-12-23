@@ -29,7 +29,7 @@ System Preferences:
     [ ] Force Click and haptic feedback
   Users & Groups:
     Login Items:
-      BetterTouchTool
+      BetterTouchTool (this has to be set within the BetterTouchTool settings)
       Cursorcerer
       Flux
       Keyboard Maestro Engine

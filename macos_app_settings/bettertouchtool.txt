@@ -1,2 +1,22 @@
-I use this app to setup custom snap areas for window positioning. I setup the snap ares to only show while holding Cmd by using this setting when creating a new snap area:
-  Only show snap area while holding: [x] Cmd
+I use this app to setup custom snap areas for window positioning, and to customize the touch bar.
+
+Basic Settings > [x] Launch BetterTouchTool on startup
+
+Gestures/Triggers > TouchBar:
+  TouchBar Button:
+    Name: Esc
+    Predefined Action: ESC (Escape Key, respects pressed modifiers)
+    Extra padding (inside): 64
+    Item Placement: Stick to the left side of the Touch Bar
+  Widget/Gesture:
+    Widget: Brightness Slider
+    Slider width: 480 px
+    Item Placement: Stick to the right side of the Touch Bar
+    Knob Icon: (use a transparent image)
+    [ ] Draw Knob Background
+  Widget/Gesture:
+    Widget: Volume Slider
+    Slider width: 480 px
+    Item Placement: Stick to the right side of the Touch Bar
+    Knob Icon: (use a transparent image)
+    [ ] Draw Knob Background
