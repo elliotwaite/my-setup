@@ -34,6 +34,7 @@ System Preferences:
       Flux
       Keyboard Maestro Engine
       Spectacle
+      prevent-touch-bar-sleep (https://apple.stackexchange.com/questions/269174/disable-the-sleep-function-of-the-macbook-touch-bar)
   Date & Time:
     Clock > Time options > [ ] Show AM/PM
     Clock > Date options > [x] Show date

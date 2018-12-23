@@ -48,6 +48,7 @@ PyCharm
 Spectacle
 Sublime Text
 VLC
+Xcode
 
 Optional:
 Adobe Lightroom Classic CC
