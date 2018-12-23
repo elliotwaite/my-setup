@@ -27,6 +27,8 @@ System Preferences:
   Trackpad:
     [x] Tap to click
     [ ] Force Click and haptic feedback
+  Bluetooth:
+    [x] Show Bluetooth in menubar
   Users & Groups:
     Login Items:
       BetterTouchTool (this has to be set within the BetterTouchTool settings)
