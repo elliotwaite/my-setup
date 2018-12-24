@@ -1,0 +1,3 @@
+Preferences
+  Tools
+    [ ] Use Rich Tooltips

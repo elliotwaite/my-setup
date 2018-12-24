@@ -87,5 +87,7 @@ Dock Apps:
 
 Installed Fonts:
   Comfortaa
+  Kontakt
   Orbitron
+  Product Sans
   Titillium Web
