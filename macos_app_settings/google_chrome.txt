@@ -9,3 +9,8 @@ Add these two:
   Search engine: PyTorch
   Keyword: p
   URL with %s in place of query: https://pytorch.org/docs/0.1.12/search.html?q=%s&check_keywords=yes&area=default#
+
+Go to "chrome://flags/" and set "Tab audio muting UI control" to Enabled.
+
+Disable automatic updates by entering the following command in a terminal:
+defaults write com.google.Keystone.Agent checkInterval 0

@@ -84,3 +84,8 @@ Dock Apps:
   |
   Applications (Sort by: Name, Display as: Folder, View content as: Grid)
   Trash
+
+Installed Fonts:
+  Comfortaa
+  Orbitron
+  Titillium Web

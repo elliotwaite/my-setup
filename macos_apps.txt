@@ -28,7 +28,7 @@ Final Cut Pro
 Firefox
 Flux
 foolcontrol
-Google Chrome
+Google Chrome (version 70 from https://www.slimjet.com/chrome/google-chrome-old-version.php)
 Google Chrome Canary
 iA Writer
 iLok License Manager (for Eventide Blackhole)
