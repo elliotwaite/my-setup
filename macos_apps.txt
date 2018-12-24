@@ -38,6 +38,7 @@ iZotope RX 7 Audio Editor
 Karabiner-Elements
 Karabiner-EventViewer
 Keyboard Maestro
+Kindle
 Loopback
 LutCreatorMac
 Max
