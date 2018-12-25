@@ -8,6 +8,8 @@ System Preferences:
     [ ] Show recent applications in Dock
   Displays:
     Display > Resolution: Scaled (middle one)
+    [ ] Automatically adjust brightness
+    [ ] True Tone
     [ ] Show mirroring options in the menu bar when available
   Energy Saver:
     [x] Automatic graphics switching
