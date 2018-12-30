@@ -3,6 +3,10 @@ For new computers:
   Update all apps through the App Store (in the Updates section and Featured section for the latest OS, multiple times if needed).
 
 System Preferences:
+  Desktop & Screen Saver:
+    Screen Saver:
+      Hot Corners:
+        Bottom Right: Put Display to Sleep
   Dock:
     [x] Automatically hide and show the Dock
     [ ] Show recent applications in Dock
@@ -26,6 +30,8 @@ System Preferences:
       [ ] Wake for Wi-Fi network access
       [ ] Enable Power Nap while on battery power
     [ ] Show battery status in menu bar (replaced with iStat Menus)
+  Keyboard:
+    [x] Turn keyboard backlight off after 5 secs of inactivity
   Trackpad:
     [x] Tap to click
     [ ] Force Click and haptic feedback
