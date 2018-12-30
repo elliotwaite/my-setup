@@ -5,6 +5,7 @@ For new computers:
 System Preferences:
   Desktop & Screen Saver:
     Screen Saver:
+      Start after: Never
       Hot Corners:
         Bottom Right: Put Display to Sleep
   Dock:
