@@ -32,7 +32,12 @@ System Preferences:
       [ ] Enable Power Nap while on battery power
     [ ] Show battery status in menu bar (replaced with iStat Menus)
   Keyboard:
-    [x] Turn keyboard backlight off after 5 secs of inactivity
+    Keyboard:
+      [x] Turn keyboard backlight off after 5 secs of inactivity
+    Shortcuts:
+      Screenshots:
+        Save picture of screen as file: Ctrl + Shift + Cmd + 3
+        Copy picture of screen to the clipboard: Shift + Cmd + 3
   Trackpad:
     [x] Tap to click
     [ ] Force Click and haptic feedback
