@@ -1,0 +1,3 @@
+I change this setting to disable receiving FaceTime calls on my laptop.
+
+Preferences > Settings > [ ] Enable this account
