@@ -105,3 +105,8 @@ Installed Fonts:
   Orbitron
   Product Sans
   Titillium Web
+
+Show Hidden Files:
+  In terminal run:
+    defaults write com.apple.finder AppleShowAllFiles YES
+  Then Alt + Right Click the "Finder" icon and choose Relaunch.
