@@ -107,6 +107,6 @@ Installed Fonts:
   Titillium Web
 
 Show Hidden Files:
-  In terminal run:
+  In a terminal run the following command:
     defaults write com.apple.finder AppleShowAllFiles YES
-  Then Alt + Right Click the "Finder" icon and choose Relaunch.
+  Then Alt + Right Click the Finder icon and select Relaunch.
