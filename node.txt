@@ -1,6 +1,10 @@
-Install Node using NVM. Following the instructions here:
-https://github.com/creationix/nvm#installation
+Install Node using NVM.
+  Following the instructions here:
+    https://github.com/creationix/nvm#installation
 
-Or run these commands:
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-nvm install node
+  Or run these commands:
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+    nvm install node
+
+Installed Node Packages:
+  npm install -g firebase-tools
