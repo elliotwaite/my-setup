@@ -7,5 +7,5 @@ Install Node using NVM.
     nvm install node
 
 Installed Node Packages:
-  npm install -g firebase-tools
-  npm install -g create-react-app
+  npm i -g firebase-tools
+  npm i -g create-react-app
