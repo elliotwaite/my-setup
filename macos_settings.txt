@@ -38,6 +38,8 @@ System Preferences:
       Screenshots:
         Save picture of screen as file: Ctrl + Shift + Cmd + 3
         Copy picture of screen to the clipboard: Shift + Cmd + 3
+      Spotlight:
+        [ ] Show Spotlight search
   Trackpad:
     [x] Tap to click
     [ ] Force Click and haptic feedback
