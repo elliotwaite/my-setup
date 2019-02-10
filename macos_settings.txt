@@ -34,6 +34,7 @@ System Preferences:
   Keyboard:
     Keyboard:
       Key Repeat: Fast (fastest)
+      Delay Until Repeat: Short (shortest)
       [x] Turn keyboard backlight off after 5 secs of inactivity
     Shortcuts:
       Screenshots:
