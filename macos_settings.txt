@@ -33,6 +33,7 @@ System Preferences:
     [ ] Show battery status in menu bar (replaced with iStat Menus)
   Keyboard:
     Keyboard:
+      Key Repeat: Fast (fastest)
       [x] Turn keyboard backlight off after 5 secs of inactivity
     Shortcuts:
       Screenshots:
