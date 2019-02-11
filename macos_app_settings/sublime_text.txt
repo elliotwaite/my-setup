@@ -2,7 +2,8 @@ Sublime Text > Preferences > Settings:
 {
   "font_size": 13,
   "tab_size": 2,
-  "translate_tabs_to_spaces": true
+  "translate_tabs_to_spaces": true,
+  "open_files_in_new_window": false
 }
 
 Sublime Text > Preferences > Key Bindings:
