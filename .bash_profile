@@ -16,4 +16,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # An alias for TensorBoard.
-Alias tb="tensorboard --logdir=runs --host=0.0.0.0"
+alias tb="tensorboard --logdir=runs --host=0.0.0.0"
