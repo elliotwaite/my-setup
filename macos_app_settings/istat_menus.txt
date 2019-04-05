@@ -58,6 +58,7 @@ Sensors
 
 Battery/Power
   Active Items:
+    Battery Percentage
     Battery Graph (black and white, vertical)
 
 Time (off)
