@@ -1,8 +1,8 @@
 Final Cut Pro > Commands > Customize...
   Blade: C
   Enable/Disable Clip: B
-  Go to Next Frame: S
-  Go to Previous Frame: F
+  Go to Next Frame: F
+  Go to Previous Frame: S
   Play Rate 2: R
   Play Rate 4: Y
   Redo Changes: Shift + Z

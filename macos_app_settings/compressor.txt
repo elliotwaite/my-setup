@@ -16,15 +16,17 @@ Then set it to these settings:
     [ ] Embed CEA-608 captions
 
   Video
-    Frame size: Up to 640 x 360
+    Frame size:
+      Up to 640 x 360
+      Up to 600 x 750 (vertical)
     Pixel aspect ratio: Default for Frame Size
     Frame rate: Automatic
-    Field order: Progressive
+    Field order: Progressive (disabled)
     Color space: Rec. 709
     Codec: H.264
     Profile: Main
     Entropy mode: CABAC
-    Key frame interval: 0 [x] Automatic
+    Key frame interval: 0 (disabled) [x] Automatic
     Data rate: Custom
     3,500 kbps
     [x] Multi-pass
@@ -44,8 +46,8 @@ Then set it to these settings:
   Audio
     Channel layout: Mono
     Sample rate: 44.1 kHz
-    Sample size: Automatic
-    Format: AAc
+    Sample size: Automatic (disabled)
+    Format: AAC
     Quality: High
     Bit rate: 160
     Bit rate strategy: Constant Bit Rate
