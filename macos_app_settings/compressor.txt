@@ -1,5 +1,7 @@
 These are the settings I use to convert a video into an optimal format for Instagram.
 
+[UPDATE: just use the default export Master File export settings in Final Cut Pro, the produce better results.]
+
 Click the plus button at the bottom left > New Setting...
   Format: MPEG-4
   Name: Instagram
@@ -52,3 +54,70 @@ Then set it to these settings:
     Bit rate: 160
     Bit rate strategy: Constant Bit Rate
 
+
+TWITTER SQUARE 1024 x 1024
+
+  Final Cut Pro Project Settings:
+    FPS: 30 or 60
+    Frame:
+      Square: 1024 x 1024
+      Landscape: 1280 x 720
+      Portrait: 720 x 1280
+      Other: between 32 x 32 and 1280 x 1024
+    Duration: between 0.5 and 140 seconds.
+    Aspect ratio: between 1:3 and 3:1
+    Pixel aspect ratio: 1:1
+    Pixel format: YUV 4:2:0
+    Audio:
+      AAC with Low Complexity profile. High-Efficiency AAC isn't supported.
+      Mono or Stereo
+    Must use progressive scan.
+    File size <= 512 MB
+
+
+  Format: MPEG-4
+  Name: Twitter 1024 x 1024 (nearest neighbor)
+
+  General
+    Name: Twitter 1024 x 1024 (nearest neighbor)
+    Description: MPEG-4
+    Default location: None
+    Format: Video and Audio
+    [x] Optimize for network use
+    Set duration to: 100.00%
+    [ ] Embed CEA-608 captions
+
+  Video
+    Frame size: Custom 1024 x 1204
+    Pixel aspect ratio: Default for Frame Size (1.0)
+    Frame rate: Automatic
+    Field order: Progressive (disabled)
+    Color space: Automatic
+    Codec: H.264
+    Profile: High
+    Entropy mode: CABAC
+    Key frame interval: 0 (disabled) [x] Automatic
+    Data rate: Custom
+    2048 kbps
+    [x] Multi-pass
+    [x] Allow frame reordering
+    360 metadata: None
+    Cropping: Custom
+    0, 0, 0, 0
+    Padding: 4x3 1.33:1
+    0, 0, 0, 0
+    Resize filter: Nearest Pixel (Fastest)
+    Retiming quality: Fast (Nearest Frame)
+    [ ] Adaptive details
+    Anti-aliasing level: 0
+    Details level: 0
+    [ ] Dithering
+
+  Audio
+    Channel layout: Automatic
+    Sample rate: 44.1 kHz
+    Sample size: Automatic (disabled)
+    Format: AAC
+    Quality: Maximum
+    Bit rate: 128
+    Bit rate strategy: Constant Bit Rate
