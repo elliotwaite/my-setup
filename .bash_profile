@@ -26,3 +26,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# For NativeScript Android development (https://docs.nativescript.org/angular/start/ns-setup-os-x).
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export ANDROID_HOME=/usr/local/share/android-sdk
