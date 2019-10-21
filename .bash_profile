@@ -7,10 +7,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/elliotwaite/google-cloud-sdk/path.bash.inc' ]; then . '/Users/elliotwaite/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/path.bash.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/elliotwaite/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/elliotwaite/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/completion.bash.inc'; fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -27,6 +27,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# For NativeScript Android development (https://docs.nativescript.org/angular/start/ns-setup-os-x).
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export ANDROID_HOME=/usr/local/share/android-sdk
+# For Flutter.
+export PATH="$PATH:/Users/elliotwaite/sdks/flutter/bin"
