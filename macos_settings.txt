@@ -115,6 +115,10 @@ Dock auto-hide times:
     defaults delete com.apple.dock autohide-time-modifier
     killall Dock
 
+Dock height:
+  defaults write com.apple.dock tilesize -int 96
+  killall Dock
+
 Installed Fonts:
   Comfortaa
   Kontakt
