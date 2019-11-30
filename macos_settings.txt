@@ -116,7 +116,7 @@ Dock auto-hide times:
     killall Dock
 
 Dock height:
-  defaults write com.apple.dock tilesize -int 96
+  defaults write com.apple.dock tilesize -int 72
   killall Dock
 
 Installed Fonts:
