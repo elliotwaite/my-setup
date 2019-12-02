@@ -40,6 +40,8 @@ System Preferences:
       Screenshots:
         Save picture of screen as file: Ctrl + Shift + Cmd + 3
         Copy picture of screen to the clipboard: Shift + Cmd + 3
+        Save picture of selected area as file: Ctrl + Shift + Cmd + 4
+        Copy picture of selected area to the clipboard: Shift + Cmd + 4
       Spotlight:
         [ ] Show Spotlight search
   Trackpad:
