@@ -11,8 +11,6 @@ Sublime Text > Preferences > Key Bindings:
   { "keys": ["super+g"], "command": "find_under_expand" },
   { "keys": ["super+shift+up"], "command": "swap_line_up" },
   { "keys": ["super+shift+down"], "command": "swap_line_down" },
-  { "keys": ["shift+up"], "command": "swap_line_up" },
-  { "keys": ["shift+down"], "command": "swap_line_down" },
   { "keys": ["super+d"], "command": "duplicate_line" },
   { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 ]
