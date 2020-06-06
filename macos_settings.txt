@@ -55,10 +55,10 @@ System Preferences:
     Login Items:
       BetterTouchTool (this has to be set within the BetterTouchTool settings)
       Cursorcerer
-      Flux
       Keyboard Maestro Engine
+      QuickShade
+      SmoothScroll
       Spectacle
-      prevent-touch-bar-sleep (https://apple.stackexchange.com/questions/269174/disable-the-sleep-function-of-the-macbook-touch-bar)
   Date & Time:
     Clock > Time options > [ ] Show AM/PM
     Clock > Date options > [x] Show date
