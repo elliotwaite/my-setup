@@ -1,0 +1,15 @@
+Mos Preferences
+
+General
+  [x] Smooth Scrolling
+  [ ] Reverse Scroll
+  [x] Launch on Login
+  [x] Hide Status Bar Icon
+
+Advanced
+  Dash Key: Cmd
+  Toggle Key: Shift
+  Block Key: Disabled
+  Step: 10.00
+  Speed: 3.00
+  Duration: 1.00
