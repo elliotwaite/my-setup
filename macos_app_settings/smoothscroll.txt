@@ -1,3 +1,5 @@
+SmoothScroll Preferences
+
 Step size [px]: 20
 Animation time [ms]: 250
 Acceleration delta [ms]: 150
