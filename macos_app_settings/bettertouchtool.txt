@@ -3,22 +3,8 @@ I use this app to setup custom snap areas for window positioning, and to customi
 Basic Settings > [x] Launch BetterTouchTool on startup
 
 Gestures/Triggers
-  Normal Mice:
-    Global:
-      Mappings (Mouse Button -> Assigend Action / Shortcut):
-        Button 3 -> 3F Swipe Right (Page Forward)
-        Button 4 -> 3F Swipe Left (Page Back)
-
-    Cmd + Scroll [Conditional active group]:
-      Activation group settings:
-        [None] of the following are true
-          [App Name] [is] [Figma]
-          [App Name] [is] [DaVinci Resolve]
-      Mappings (Mouse Button -> Assigend Action / Shortcut):
-        Cmd + Scroll Down -> Cmd + Down
-        Cmd + Scroll Up -> Cmd + Up
-
   TouchBar:
+
     TouchBar Button:
       Name: Esc
       Predefined Action: ESC (Escape Key, respects pressed modifiers)
