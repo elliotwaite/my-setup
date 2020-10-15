@@ -6,7 +6,7 @@ Acceleration delta [ms]: 150
 Acceleration max [x]: 1000
 Tail to head ratio [x]: 3
 
-[x] Auto start on login
+[ ] Auto start on login
 [ ] Show menu bar icon
 [x] Animation easing
 [ ] Standard wheel direction
