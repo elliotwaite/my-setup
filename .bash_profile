@@ -27,5 +27,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# For Nim.
+export PATH=$PATH:/Users/elliotwaite/.nimble/bin
+
+# Alias for Blackd.
+alias b="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
+
 # For Flutter.
 export PATH="$PATH:/Users/elliotwaite/sdks/flutter/bin"
