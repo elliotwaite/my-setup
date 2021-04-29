@@ -44,6 +44,11 @@ System Preferences:
         Copy picture of selected area to the clipboard: Shift + Cmd + 4
       Spotlight:
         [ ] Show Spotlight search
+    Input Sources:
+      Unicode Hex Input
+        Bidirectional text:
+          [ ] Use split cursor
+          [ ] Enable keyboard shortcuts
   Mouse:
     [x] Scroll direction: Natural
     Tracking speed: 6/10 (3rd LED light on Evoluent mouse)
