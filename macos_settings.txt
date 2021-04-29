@@ -45,10 +45,13 @@ System Preferences:
       Spotlight:
         [ ] Show Spotlight search
     Input Sources:
+      (I use the "Unicode Hex Input" input source instead of the "U.S." one to
+      disable the greek letter keyboard shortcuts, e.g. "alt + f" -> "ƒ")
       Unicode Hex Input
         Bidirectional text:
           [ ] Use split cursor
           [ ] Enable keyboard shortcuts
+      [ ] Show Input menu in menu bar
   Mouse:
     [x] Scroll direction: Natural
     Tracking speed: 6/10 (3rd LED light on Evoluent mouse)
