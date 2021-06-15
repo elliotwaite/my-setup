@@ -13,3 +13,8 @@ Advanced
   Step: 10.00
   Speed: 3.00
   Duration: 1.00
+
+Exceptions
+  DaVinci Resolve
+    [ ] Smooth
+    [ ] Reverse
