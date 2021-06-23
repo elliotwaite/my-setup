@@ -1,23 +1,36 @@
 ZSH_DIR=$HOME/code/zsh
 
-# Download zsh-syntax-highlighting into the ZSH_DIR:
+# Download zsh-syntax-highlighting into your ZSH_DIR:
 #   https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Download zsh-autosuggestions into the ZSH_DIR:
+# Download zsh-autosuggestions into your ZSH_DIR:
 #   https://github.com/zsh-users/zsh-autosuggestions
 source $ZSH_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Download zsh-completions into the ZSH_DIR:
+# Download zsh-completions into your ZSH_DIR:
 #   https://github.com/zsh-users/zsh-completions
 #
-# Also, download completions for nim and nimble by downloading there
+# Also, download completions for nim and nimble by downloading their
 # completion files into "ZSH_DIR/zsh-completions/src". You can do this by using
-# the curl commands below, but note: if you use a different "ZSH_DIR", change
-# the "~/code/zsh" part of each commands specified output path.
+# the curl commands below, but note: if you use a different "ZSH_DIR", update
+# the "~/code/zsh" part of the commands before running them.
 #   curl https://raw.githubusercontent.com/nim-lang/Nim/devel/tools/nim.zsh-completion -o ~/code/zsh/zsh-completions/src/_nim
 #   curl https://raw.githubusercontent.com/nim-lang/nimble/master/nimble.zsh-completion -o ~/code/zsh/zsh-completions/src/_nimble
+#
+# Also, to fix the "insecure directories" error message, I had to run:
+#   compaudit | xargs chmod g-w
+# as suggested here:
+#   https://github.com/zsh-users/zsh-completions/issues/680#issuecomment-612960481
 fpath=($ZSH_DIR/zsh-completions/src $fpath)
+autoload -U compinit && compinit
+
+# Download enhancd into your ZSH_DIR:
+#   https://github.com/b4b4r07/enhancd
+#
+# Also, follow instructions to install fzy and ccat with homebrew:
+#   https://github.com/b4b4r07/enhancd#bash
+source $ZSH_DIR/enhancd/init.sh
 
 # Download powerlevel10k into the ZSH_DIR:
 #   https://github.com/romkatv/powerlevel10k
