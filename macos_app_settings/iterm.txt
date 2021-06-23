@@ -1,2 +1,21 @@
-Place "com.googlecode.iterm2.plist" (located in the same folder as this text file) in any empty folder on your Mac (ex. ~/Downloads/temp) Then in the preferences (iTerm2 > Preferences... > General > Preferences), check the "Load preferences from a custom folder or URL", and select the "~/Downloads" folder. Then quit and restart iTerm2. The preferences should now be loaded and the colors should look different. The go back into the settings and uncheck "load preferences from a custom folder or URL". Then you can delete that folder (~/Downloads).
+To import settings:
+  1. Place "com.googlecode.iterm2.plist" (located in the same folder as this
+     text file) in any empty folder on your Mac (e.g. ~/Downloads).
+  2. Then go to [iTerm2 > Preferences... > General > Preferences] and:
+     * Check the "Load preferences from a custom folder or URL".
+     * Select the folder used above (e.g. "~/Downloads").
+  3. Then quit and restart iTerm2. The preferences should now be loaded and the
+     colors should look different.
+  4. Go back into [iTerm2 > Preferences... > General > Preferences] and:
+     * Uncheck the "Load preferences from a custom folder or URL"
+  5. Then you can delete the "com.googlecode.iterm2.plist" file.
 
+To save settings:
+  1. Go to [iTerm2 > Preferences... > General > Preferences] and:
+     * Check the "Load preferences from a custom folder or URL".
+     * Select the folder where you want the preferences saved
+       (e.g. "~/Downloads").
+     * Select "Save changes [Manually]", and click "Save Now".
+  2. The generated settings file, "com.googlecode.iterm2.plist", will be saved
+     to the output folder. You can then copy it into the same folder as this
+     text file to overwrite the previously saved settings file.
