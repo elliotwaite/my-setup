@@ -1,4 +1,4 @@
-These are all the apps I have installed.
+All my apps:
 
 Ableton Live Suite 9
   Plug-ins:
@@ -17,21 +17,26 @@ Ableton Live Suite 9
   FabFilter Pro-L 2
   FabFilter Pro-Q 2
   RX 7
-Adobe Photoshop CC 2019
+
 Aria Maestosa
 BetterTouchTool
-Compressor
+Brave Browser
 Cursorcerer
+Deskscribble
 Discord
+eLicenser Control Center
+Evernote
 Evoluent
-Final Cut Pro
+Figma
+DaVinci Resolve
 Firefox
 Flux
-foolcontrol
-Google Chrome (version 70 from https://www.slimjet.com/chrome/google-chrome-old-version.php)
-Google Chrome Canary
-iA Writer
+Fotor Photo Editor
+GeoGebra Classic 6
+Google Chrome
+Hammerspoon
 iLok License Manager (for Eventide Blackhole)
+IntelliJ Community
 iStat Menus
 iTerm
 iZotope RX 7 Audio Editor
@@ -40,24 +45,21 @@ Karabiner-EventViewer
 Keyboard Maestro
 Kindle
 Loopback
-LutCreatorMac
 Max
 MediaHuman Audio Converter
 MediaHuman YouTube Downloader
+Mos
 Neat Video v4 for Final Cut
-PyCharm
+OBS
+ProtobufViewer
+PyCharm Community
+QuickShade
 Spectacle
+Spotify
 Sublime Text
+Time Out
+Transmit
+Visual Studio Code
 VLC
 Xcode
-
-Optional:
-Adobe Lightroom Classic CC
-Astropad Studio
-eLicenser Control Center
-Loopback
-OBS
-StreamLabels
-Textual
-Transmit
-ZhiyunGimbalTools
+Zoom
