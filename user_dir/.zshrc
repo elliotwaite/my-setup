@@ -41,14 +41,14 @@ source ~/code/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/elliotwaite/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/elliotwaite/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/elliotwaite/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/elliotwaite/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/Users/elliotwaite/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/elliotwaite/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/elliotwaite/miniforge3/bin:$PATH"
+        export PATH="/Users/elliotwaite/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -61,4 +61,9 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.nimble/bin
 
 # Alias for blackd.
-alias blackd="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
+alias b="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
+
+# For NVM.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
