@@ -37,11 +37,14 @@ System Preferences:
       Delay Until Repeat: Short (shortest)
       [x] Turn keyboard backlight off after 5 secs of inactivity
     Shortcuts:
+      Mission Control:
+        [x] Move left a space: F3
+        [x] Move right a space: F5
       Screenshots:
-        Save picture of screen as file: Ctrl + Shift + Cmd + 3
-        Copy picture of screen to the clipboard: Shift + Cmd + 3
-        Save picture of selected area as file: Ctrl + Shift + Cmd + 4
-        Copy picture of selected area to the clipboard: Shift + Cmd + 4
+        [x] Save picture of screen as file: Ctrl + Shift + Cmd + 3
+        [x] Copy picture of screen to the clipboard: Shift + Cmd + 3
+        [x] Save picture of selected area as file: Ctrl + Shift + Cmd + 4
+        [x] Copy picture of selected area to the clipboard: Shift + Cmd + 4
       Spotlight:
         [ ] Show Spotlight search
     Input Sources:
