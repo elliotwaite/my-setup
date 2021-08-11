@@ -38,6 +38,7 @@ System Preferences:
       [x] Turn keyboard backlight off after 5 secs of inactivity
     Shortcuts:
       Mission Control:
+        [x] Mission Control: F4
         [x] Move left a space: F3
         [x] Move right a space: F5
       Screenshots:
