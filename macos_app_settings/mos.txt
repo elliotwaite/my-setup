@@ -18,3 +18,17 @@ Exceptions
   DaVinci Resolve
     [ ] Smooth
     [ ] Reverse
+    App specific settings:
+      [x] Inherit Global Settings
+
+  Figma
+    [x] Smooth
+    [ ] Reverse
+    App specific settings:
+      [ ] Inherit Global Settings
+      Dash Key: Disabled
+      Toggle Key: Disabled
+      Block Key: Disabled
+      Step: 10.00
+      Speed: 1.00
+      Duration: 1.00
