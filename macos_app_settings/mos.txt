@@ -27,7 +27,7 @@ Exceptions
     App specific settings:
       [ ] Inherit Global Settings
       Dash Key: Disabled
-      Toggle Key: Disabled
+      Toggle Key: Shift
       Block Key: Disabled
       Step: 10.00
       Speed: 1.00
