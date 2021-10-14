@@ -71,12 +71,17 @@ System Preferences:
     [x] Show Bluetooth in menubar
   Users & Groups:
     Login Items:
+      Android File Transfer Agent
       BetterTouchTool (this has to be set within the BetterTouchTool settings)
       Cursorcerer
+      Flux
+      Hammerspoon
       Keyboard Maestro Engine
+      Mos
       QuickShade
       SmoothScroll
       Spectacle
+      start_blackd (located in this repo at /automator_apps/start_blackd.app)
   Date & Time:
     Clock > Time options > [ ] Show AM/PM
     Clock > Date options > [x] Show date
