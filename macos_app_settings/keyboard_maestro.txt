@@ -15,7 +15,7 @@ This will add the following macros:
     Cmd + Left: Home
     Cmd + Right: End
     Shift + Delete: Alt + Delete, Delete, Space
-    (note: Home and End work better than the Cmd + Left/Right in PyCharm's terminal, and I use Shift + Delete to clear the line and go the the end of the previous line.)
+    (note: Home and End work better than the Cmd + Left/Right in PyCharm's terminal, and I use Shift + Delete to clear the line and go the end of the previous line.)
 
 Also, go to Keyboard Maestro > Preferences...
   General

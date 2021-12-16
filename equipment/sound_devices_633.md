@@ -1,6 +1,6 @@
 # Sound Devices 633 Settings
 
-* SD card: SanDisk - Extreme Pro, UDMA7,160MB/s - 16GB
+* SD card: SanDisk - Extreme Pro, UDMA7, 160 MB/s - 16 GB
 * Mic: Sennheiser MKH 416
 * Set the channels 1, 2, and 3 trim knobs:
   * Use the analog headphone to XLR cord to plug mac headphone output to XLR inputs.

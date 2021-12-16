@@ -1,4 +1,4 @@
-I use this app to setup custom snap areas for window positioning, and to customize the touch bar.
+I use this app to set up custom snap areas for window positioning, and to customize the touch bar.
 
 Basic Settings > [x] Launch BetterTouchTool on startup
 

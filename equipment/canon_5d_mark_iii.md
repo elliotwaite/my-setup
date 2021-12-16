@@ -8,7 +8,7 @@
 * Beep: Disable
 * Release shutter without card: OFF
 * Lens aberration correction:
-  * EF70-200mm f/2.8L IS II USM:
+  * EF 70-200 mm f/2.8L IS II USM:
     * Peripheral illumin.: Enable
     * Chromatic aberration: Enable
 * External Speedlite control: (not used, all defaults)
