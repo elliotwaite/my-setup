@@ -78,6 +78,7 @@ System Preferences:
       Hammerspoon
       Keyboard Maestro Engine
       Mos
+      noTunes
       QuickShade
       SmoothScroll
       Spectacle

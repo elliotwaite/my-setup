@@ -50,6 +50,7 @@ MediaHuman Audio Converter
 MediaHuman YouTube Downloader
 Mos
 Neat Video v4 for Final Cut
+noTunes (https://github.com/tombonez/noTunes)
 OBS
 ProtobufViewer
 PyCharm Community
