@@ -60,8 +60,15 @@ export PATH=$PATH:$HOME/bin
 # For Nim.
 export PATH=$PATH:$HOME/.nimble/bin
 
+# For Flutter.
+export PATH=$PATH:$HOME/sdks/flutter/bin
+
+# For Expo Android emulator (https://docs.expo.dev/workflow/android-studio-emulator/).
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+
 # Alias for blackd.
-alias b="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
+alias black="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
 
 # For NVM.
 export NVM_DIR="$HOME/.nvm"
