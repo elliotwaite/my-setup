@@ -65,6 +65,7 @@ export PATH=$PATH:$HOME/sdks/flutter/bin
 
 # For Expo Android emulator (https://docs.expo.dev/workflow/android-studio-emulator/).
 export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
 
