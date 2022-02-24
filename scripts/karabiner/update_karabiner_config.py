@@ -132,7 +132,7 @@ COMPLEX_MODIFICATIONS = [
             ('1', 'l_cmd', 'any', 'j', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Cmd + i -> Show developer tools (View > Developer > Developer Tools).
             ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
-            # Alt + f -> Toggle full sreen mode (View > Enter Full Screen).
+            # Alt + f -> Toggle full sreen mode (View > Enter/Exit Full Screen).
             ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
         ],
     },
