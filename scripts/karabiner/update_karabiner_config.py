@@ -128,11 +128,11 @@ COMPLEX_MODIFICATIONS = [
         'manipulators': [
             # Open a new Brave tab.
             ('esc', 'l_cmd', 'any', apple_script_shell_command(OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT)),
-            # Hotkey for 'View > Developer > JavaScript Console'.
+            # Cmd + 1 -> Show console (View > Developer > JavaScript Console).
             ('1', 'l_cmd', 'any', 'j', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
-            # Hotkey for 'View > Developer > Developer Tools'.
+            # Cmd + i -> Show developer tools (View > Developer > Developer Tools).
             ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
-            # Hotkey for 'View > Enter Full Screen'.
+            # Alt + f -> Toggle full sreen mode (View > Enter Full Screen).
             ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
         ],
     },
