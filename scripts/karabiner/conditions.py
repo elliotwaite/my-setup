@@ -1,4 +1,4 @@
-IF_IS_APPLE_INTERNAL_KEYBOARD = [
+IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD = [
     {
         'type': 'device_if',
         'identifiers': [
@@ -11,7 +11,7 @@ IF_IS_APPLE_INTERNAL_KEYBOARD = [
     },
 ]
 
-IF_IS_EVOLUENT_VERTICAL_MOUSE_C = [
+IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C = [
     {
         'type': 'device_if',
         'identifiers': [
@@ -23,7 +23,7 @@ IF_IS_EVOLUENT_VERTICAL_MOUSE_C = [
     }
 ]
 
-IF_IS_BROWSER = [
+IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME = [
     {
         'type': 'frontmost_application_if',
         'bundle_identifiers': [

@@ -21,9 +21,9 @@ from pathlib import Path
 
 from apple_scripts import apple_script_shell_command, OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT
 from conditions import (
-    IF_IS_APPLE_INTERNAL_KEYBOARD,
-    IF_IS_EVOLUENT_VERTICAL_MOUSE_C,
-    IF_IS_BROWSER,
+    IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD,
+    IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
+    IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME,
 )
 from key_map import get_key
 
@@ -108,19 +108,19 @@ COMPLEX_MODIFICATIONS = [
     {
         'description': 'Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick',
         'manipulators': [
-            ('`', 'cmd', 'any', '`', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
-            ('`', '', 'any', 'esc', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
+            ('`', 'cmd', 'any', '`', '', IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
+            ('`', '', 'any', 'esc', '', IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
         ],
     },
     {
         'description': 'Evoluent Mouse Button Swaps (2 <-> 3, 4 <-> 5)',
         'manipulators': [
             # Swap buttons 2 and 3 (middle and right click).
-            ('button2', '', '', 'button3', '', IF_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            ('button3', '', 'any', 'button2', '', IF_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            ('button2', '', '', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            ('button3', '', 'any', 'button2', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             # Swap buttons 4 and 5 (forward and back navigation).
-            ('button4', '', 'any', 'button5', '', IF_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            ('button5', '', 'any', 'button4', '', IF_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            ('button4', '', 'any', 'button5', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            ('button5', '', 'any', 'button4', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
         ],
     },
     {
@@ -129,11 +129,11 @@ COMPLEX_MODIFICATIONS = [
             # Open a new Brave tab.
             ('esc', 'l_cmd', 'any', apple_script_shell_command(OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT)),
             # Hotkey for 'View > Developer > JavaScript Console'.
-            ('1', 'l_cmd', 'any', 'j', 'cmd alt', IF_IS_BROWSER),
+            ('1', 'l_cmd', 'any', 'j', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Hotkey for 'View > Developer > Developer Tools'.
-            ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_IS_BROWSER),
+            ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Hotkey for 'View > Enter Full Screen'.
-            ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_IS_BROWSER),
+            ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
         ],
     },
 ]
