@@ -106,7 +106,7 @@ COMPLEX_MODIFICATIONS = [
         ],
     },
     {
-        'description': 'Touch Bar Keyboard: Backtick -> Escape, Cmd + Backtick -> Backtick',
+        'description': 'Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick',
         'manipulators': [
             ('`', 'cmd', 'any', '`', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
             ('`', '', 'any', 'esc', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
