@@ -1,3 +1,21 @@
+"""A script for updating the Karabiner config file.
+
+The below modifications will overwrite any existing modifications in the
+config file at: ~/.config/karabiner/karabiner.json
+
+Karabiner handles input events in the following order:
+  1. Catch events from hardware.
+  2. Apply Simple Modifications.
+  3. Apply Complex Modifications.
+  4. Apply Function Keys Modifications.
+  5. Post events to applications via a virtual keyboard.
+
+All three types of modifications (simple, complex, and function keys) can
+be specified below.
+
+For the full list of available key names that can be mapped from/to, see:
+  ./key_map.py
+"""
 import json
 from pathlib import Path
 
@@ -11,35 +29,54 @@ from key_map import get_key
 
 KARABINER_CONFIG_PATH = Path.home() / '.config/karabiner/karabiner.json'
 
-# The below modifications will overwrite any existing modifications in the
-# Karabiner config file.
-#
-# Karabiner handles input events in the following order:
-#   1. Catch events from hardware.
-#   2. Apply Simple Modifications.
-#   3. Apply Complex Modifications.
-#   4. Apply Function Keys Modifications.
-#   5. Post events to applications via a virtual keyboard.
-
-# Tuples of (from_key, to_key).
+# Simple modification are mappings from one key to another. This should be a
+# list of (from_key, to_key) tuples. See "./key_map.py" for key names.
 SIMPLE_MODIFICATIONS = [
     ('f3', 'f17'),
     ('f4', 'f18'),
     ('f5', 'f19'),
 ]
 
-# The list of complex modification rules.
+# This is the list of complex modification rules. For more info on complex
+# modifications, see: https://karabiner-elements.pqrs.org/docs/json/
 #
 # The values in the `manipulators` list can be tuples of this type:
 # (
-#   from_key (string, or space separated strings for simultaneous keys),
-#   from_modifiers_mandatory (space separated strings),
-#   from_modifiers_optional (space separated strings),
-#   to_key (string, or space separated stings for multiple keys, or dict, or list of dicts),
-#   to_modifiers (optional, space separated strings),
-#   conditions (optional, list)
-#   to_config (optional, dict, will be merged with the last `to` dict),
+#   from_key (a string of one or more key names),
+#   from_modifiers_mandatory (optional, a string of zero or more modifier key names),
+#   from_modifiers_optional (optional, a string of zero or more modifier key names, or 'any'),
+#   to_key (optional, a string of zero or more key names),
+#   to_modifiers (optional, a string of zero or more modifier key names),
+#   conditions (optional, a `manipulator.conditions` list),
+#   to_config (optional, a dict. If specified it will be merged with the last `to` dict),
 # )
+#
+# If `from_key` specifies multiple keys, those keys will have to be pressed
+# simultaneously to trigger the mapping. See:
+# https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/simultaneous/
+#
+# If `to_key` specifies multiple keys, those keys will be pressed in order.
+# For example, this will map `left_command + h` to typing out "hello":
+# ('h', 'l_cmd', 'any', 'h e l l o')
+#
+# `conditions` can be used to only trigger the mapping if certain conditions
+# are met, such as only when a certain application is being used, or only when
+# a certain keyboard or mouse is being used. For the full list of options see:
+# https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/conditions/
+#
+# `to_config` can be used to specify extra settings that will be applied to the
+# key being mapped to (or to the last key being mapped to if multiple `to_key`
+# keys are specified). For example, this will map `left_command + h` to typing
+# out "hello", but unlike the above example, this version will prevent the "o"
+# from being typed repeatedly if `left_command + h` is held:
+# ('h', 'l_cmd', 'any', 'h e l l o', None, None, {'repeat': False})
+#
+# For more info about how `to_config` could be used, see:
+# https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/
+#
+# For more complex manipulators, you can specify them directly without using
+# the tuple format described above. The tuple format is just for convenience.
+
 COMPLEX_MODIFICATIONS = [
     {
         'description': 'Left Cmd/Alt + Right Hand Keys -> Navigation',
@@ -69,7 +106,7 @@ COMPLEX_MODIFICATIONS = [
         ],
     },
     {
-        'description': 'Touchbar Keyboard: Backtick -> Escape, Cmd + Backtick -> Backtick',
+        'description': 'Touch Bar Keyboard: Backtick -> Escape, Cmd + Backtick -> Backtick',
         'manipulators': [
             ('`', 'cmd', 'any', '`', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
             ('`', '', 'any', 'esc', '', IF_IS_APPLE_INTERNAL_KEYBOARD),
@@ -101,7 +138,8 @@ COMPLEX_MODIFICATIONS = [
     },
 ]
 
-# Tuples of ([f1-f12], to_key).
+# Function keys modifications can be used to remap f1 - f12 to any other keys.
+# This should be a list of ('f[number]', to_key) tuples.
 FUNCTION_KEYS_MODIFICATIONS = [
     ('f1', 'f1'),
     ('f2', 'f2'),
@@ -146,22 +184,22 @@ def convert_manipulator_tuple(manipulator):
         to_config,
     ) = manipulator
 
-    assert isinstance(from_keys, str), (
+    assert from_keys and isinstance(from_keys, str), (
         f'`from_keys` was set to "{from_keys}". '
-        '`from_keys` must be a string of zero or more key names '
+        '`from_keys` must be a string of one or more key names '
         '(see "key_map.py" for key names).',
     )
-    assert isinstance(from_modifiers_mandatory, str), (
+    assert not from_modifiers_mandatory or isinstance(from_modifiers_mandatory, str), (
         f'`from_modifiers_mandatory` was set to "{from_modifiers_mandatory}". '
         '`from_modifiers_mandatory` must be a string of zero or more modifier key names '
         '(see "key_map.py" for modifier key names).',
     )
-    assert isinstance(from_modifiers_optional, str), (
+    assert not from_modifiers_optional or isinstance(from_modifiers_optional, str), (
         f'`from_modifiers_optional` was set to "{from_modifiers_optional}". '
         '`from_modifiers_optional` must be "any", a string of zero or more modifier keynames '
         '(see "key_map.py" for modifier key names), or None.',
     )
-    assert (
+    assert not to_obj or (
         isinstance(to_obj, str)
         or isinstance(to_obj, dict)
         or isinstance(to_obj, list)
@@ -189,8 +227,7 @@ def convert_manipulator_tuple(manipulator):
         '(see "key_map.py" for modifier key names), or None',
     )
 
-    if from_keys:
-        from_keys = [get_key(key) for key in from_keys.split()]
+    from_keys = [get_key(key) for key in from_keys.split()]
 
     if from_modifiers_mandatory:
         from_modifiers_mandatory = [
@@ -215,13 +252,10 @@ def convert_manipulator_tuple(manipulator):
     if conditions:
         result['conditions'] = conditions
 
-    if from_keys:
-        if len(from_keys) > 1:
-            result['from'] = {'simultaneous': from_keys}
-        else:
-            result['from'] = from_keys[0]
+    if len(from_keys) > 1:
+        result['from'] = {'simultaneous': from_keys}
     else:
-        result['from'] = {}
+        result['from'] = from_keys[0]
 
     if from_modifiers_mandatory or from_modifiers_optional:
         result['from']['modifiers'] = {}
