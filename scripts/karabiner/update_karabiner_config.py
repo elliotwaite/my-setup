@@ -128,7 +128,7 @@ COMPLEX_MODIFICATIONS = [
         'manipulators': [
             # Open a new Brave tab.
             ('esc', 'l_cmd', 'any', apple_script_shell_command(OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT)),
-            # Cmd + 1 -> Show console (View > Developer > JavaScript Console).
+            # Cmd + 1 -> Show JavaScript console (View > Developer > JavaScript Console).
             ('1', 'l_cmd', 'any', 'j', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Cmd + i -> Show developer tools (View > Developer > Developer Tools).
             ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
