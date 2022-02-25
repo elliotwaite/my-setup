@@ -118,9 +118,9 @@ COMPLEX_MODIFICATIONS = [
             # Swap buttons 2 and 3 (middle and right click).
             ('button2', '', '', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             ('button3', '', 'any', 'button2', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            # Swap buttons 4 and 5 (forward and back navigation).
-            ('button4', '', 'any', 'button5', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            ('button5', '', 'any', 'button4', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            # Mapping buttons 4 and 5 (forward and back navigation).
+            ('button4', '', 'any', ']', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            ('button5', '', 'any', '[', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
         ],
     },
     {
