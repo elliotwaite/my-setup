@@ -116,9 +116,9 @@ COMPLEX_MODIFICATIONS = [
         'description': 'Evoluent Mouse Button Swaps (2 <-> 3, 4 <-> 5)',
         'manipulators': [
             # Swap buttons 2 and 3 (middle and right click).
-            ('button2', '', '', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             ('button3', '', 'any', 'button2', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            # Mapping buttons 4 and 5 (forward and back navigation).
+            ('button2', '', 'any', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            # # Mapping buttons 4 and 5 (forward and back navigation).
             ('button4', '', 'any', ']', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             ('button5', '', 'any', '[', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
         ],
@@ -255,7 +255,7 @@ def convert_manipulator_tuple(manipulator):
     if len(from_keys) > 1:
         result['from'] = {'simultaneous': from_keys}
     else:
-        result['from'] = from_keys[0]
+        result['from'] = from_keys[0].copy()
 
     if from_modifiers_mandatory or from_modifiers_optional:
         result['from']['modifiers'] = {}
@@ -266,11 +266,11 @@ def convert_manipulator_tuple(manipulator):
 
     if isinstance(to_obj, list):
         if to_obj:
-            result['to'] = to_obj
+            result['to'] = [o.copy() for o in to_obj]
         else:
             result['to'] = [{}]
     elif isinstance(to_obj, dict):
-        result['to'] = [to_obj]
+        result['to'] = [to_obj.copy()]
 
     if to_modifiers:
         result['to'][0]['modifiers'] = to_modifiers
