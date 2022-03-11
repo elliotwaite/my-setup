@@ -85,7 +85,7 @@ COMPLEX_MODIFICATIONS = [
             ('u', 'l_cmd', 'any', 'left', 'alt'),
             # i
             ('i', 'l_cmd r_shift', 'any', 'up', 'shift'),
-            ('i', 'l_cmd l_shift', 'any', 'up', 'alt shift'),
+            ('i', 'l_cmd l_shift', 'any', 'up', 'cmd shift'),
             ('i', 'l_cmd', 'any', 'up', ''),
             ('i', 'l_alt', 'any', 'up', 'cmd'),
             # o
@@ -116,8 +116,8 @@ COMPLEX_MODIFICATIONS = [
         'description': 'Evoluent Mouse Button Swaps (2 <-> 3, 4 <-> 5)',
         'manipulators': [
             # Swap buttons 2 and 3 (middle and right click).
-            ('button3', '', 'any', 'button2', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
-            ('button2', '', 'any', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            # ('button3', '', 'any', 'button2', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
+            # ('button2', '', 'any', 'button3', '', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             # # Mapping buttons 4 and 5 (forward and back navigation).
             ('button4', '', 'any', ']', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             ('button5', '', 'any', '[', 'cmd', IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
