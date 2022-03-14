@@ -1,9 +1,14 @@
 Sublime Text > Preferences > Settings:
 {
-  "font_size": 13,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "open_files_in_new_window": false
+	"auto_complete": false,
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"scroll_speed": 1.0
 }
 
 Sublime Text > Preferences > Key Bindings:
@@ -12,7 +17,14 @@ Sublime Text > Preferences > Key Bindings:
   { "keys": ["super+shift+up"], "command": "swap_line_up" },
   { "keys": ["super+shift+down"], "command": "swap_line_down" },
   { "keys": ["super+d"], "command": "duplicate_line" },
+  { "keys": ["super+3"], "command": "toggle_comment", "args": { "block": false } },
   { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  { "button": "scroll_down", "modifiers": ["super"], "command": "swap_line_down"},
+  { "button": "scroll_up", "command": "swap_line_down"},
+  { "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+  { "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+  { "keys": ["alt+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+  { "keys": ["alt+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} }
 ]
 
 View > Hide Minimap
