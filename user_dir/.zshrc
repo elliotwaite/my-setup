@@ -60,6 +60,9 @@ export PATH=$PATH:$HOME/bin
 # For Nim.
 export PATH=$PATH:$HOME/.nimble/bin
 
+# For React Native.
+export REACT_EDITOR=pycharm
+
 # For Flutter.
 export PATH=$PATH:$HOME/sdks/flutter/bin
 
