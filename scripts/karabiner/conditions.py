@@ -32,3 +32,12 @@ IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME = [
         ],
     }
 ]
+
+IF_FRONT_APPLICATION_IS_PYCHARM = [
+    {
+        'type': 'frontmost_application_if',
+        'bundle_identifiers': [
+            r'^com\.jetbrains\.pycharm$',
+        ],
+    }
+]

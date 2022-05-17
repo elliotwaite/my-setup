@@ -24,6 +24,7 @@ from conditions import (
     IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD,
     IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
     IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME,
+    IF_FRONT_APPLICATION_IS_PYCHARM,
 )
 from key_map import get_key
 
@@ -42,11 +43,14 @@ SIMPLE_MODIFICATIONS = [
 #
 # The values in the `manipulators` list can be tuples of this type:
 # (
-#   from_key (a string of one or more key names),
-#   from_modifiers_mandatory (optional, a string of zero or more modifier key names),
-#   from_modifiers_optional (optional, a string of zero or more modifier key names, or 'any'),
-#   to_key (optional, a string of zero or more key names),
-#   to_modifiers (optional, a string of zero or more modifier key names),
+#   from_key (a string of a one or more key names separated by spaces),
+#   from_modifiers_mandatory (optional, a string of zero or more modifier key names separated by
+#                             spaces),
+#   from_modifiers_optional (optional, a string of zero or more modifier key names separated by
+#                            spaces, or 'any'),
+#   to_key (optional, a string of a key name or a list of strings of key names),
+#   to_modifiers (optional, a string of a modifier key names separated by spaces, or a list of
+#                 strings of modifier key names separated by spaces),
 #   conditions (optional, a `manipulator.conditions` list),
 #   to_config (optional, a dict. If specified it will be merged with the last `to` dict),
 # )
@@ -55,9 +59,15 @@ SIMPLE_MODIFICATIONS = [
 # simultaneously to trigger the mapping. See:
 # https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/simultaneous/
 #
-# If `to_key` specifies multiple keys, those keys will be pressed in order.
+# If `to_key` specifies a list of keys, those keys will be pressed in order.
 # For example, this will map `left_command + h` to typing out "hello":
-# ('h', 'l_cmd', 'any', 'h e l l o')
+# ('h', 'l_cmd', 'any', ['h', 'e', 'l', 'l', 'o'])
+#
+# If `to_modifiers` specifies a list of modifier keys, those modifiers will be
+# associated with the `to_keys` value at the same index.
+# For example, this will map `left_command + h` to the sequence `alt + h`,
+# `cmd + e`, `l`, `ctrl + l`, `shift + o`:
+# ('h', 'l_cmd', 'any', ['h', 'e', 'l', 'l', 'o'], ['alt', 'cmd', None, 'ctrl', 'sfit'])
 #
 # `conditions` can be used to only trigger the mapping if certain conditions
 # are met, such as only when a certain application is being used, or only when
@@ -69,7 +79,7 @@ SIMPLE_MODIFICATIONS = [
 # keys are specified). For example, this will map `left_command + h` to typing
 # out "hello", but unlike the above example, this version will prevent the "o"
 # from being typed repeatedly if `left_command + h` is held:
-# ('h', 'l_cmd', 'any', 'h e l l o', None, None, {'repeat': False})
+# ('h', 'l_cmd', 'any', ['h', 'e', 'l', 'l', 'o'], None, None, {'repeat': False})
 #
 # For more info about how `to_config` could be used, see:
 # https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/
@@ -134,6 +144,31 @@ COMPLEX_MODIFICATIONS = [
             ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Alt + f -> Toggle full sreen mode (View > Enter/Exit Full Screen).
             ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
+        ],
+    },
+    {
+        'description': 'PyCharm "Find in Files..." and "Replace in Files..." Hotkeys',
+        'manipulators': [
+            # Alt + f -> `Focus Editor`, `Find in File...`.
+            (
+                'f',
+                'l_alt',
+                'any',
+                ['e', 'f'],
+                ['cmd alt ctrl shift', 'cmd alt ctrl shift'],
+                IF_FRONT_APPLICATION_IS_PYCHARM,
+                {'repeat': False},
+            ),
+            # Ctrl + f -> `Focus Editor`, `Replace in File...`.
+            (
+                'f',
+                'l_ctrl',
+                'any',
+                ['e', 'r'],
+                ['cmd alt ctrl shift', 'cmd alt ctrl shift'],
+                IF_FRONT_APPLICATION_IS_PYCHARM,
+                {'repeat': False},
+            ),
         ],
     },
 ]
@@ -203,17 +238,22 @@ def convert_manipulator_tuple(manipulator):
         isinstance(to_obj, str)
         or isinstance(to_obj, dict)
         or isinstance(to_obj, list)
-        and isinstance(to_obj[0], dict)
+        and (isinstance(to_obj[0], str) or isinstance(to_obj[0], dict))
     ), (
         f'`to_obj` was set to "{to_obj}". '
         '`to_obj` must be a string of zero or more key names '
-        '(see "key_map.py" for key names), '
+        'separated by commas (see "key_map.py" for key names), '
         'or a `manipulator.to[0]` dict, or a `manipulator.to` list of dicts, or None.'
     )
-    assert not to_modifiers or isinstance(to_modifiers, str), (
+    assert (
+        not to_modifiers
+        or isinstance(to_modifiers, str)
+        or isinstance(to_modifiers, list)
+        and isinstance(to_modifiers[0], str)
+    ), (
         f'`to_modifiers` was set to "{to_modifiers}". '
         '`to_modifiers` must be a string of zero or more modifier key names '
-        '(see "key_map.py" for modifier key names), or None.',
+        'separated by commas (see "key_map.py" for modifier key names), or None.',
     )
     assert not conditions or isinstance(conditions, list) and isinstance(conditions[0], dict), (
         f'`conditions` was set to "{conditions}". '
@@ -227,24 +267,6 @@ def convert_manipulator_tuple(manipulator):
         '(see "key_map.py" for modifier key names), or None',
     )
 
-    from_keys = [get_key(key) for key in from_keys.split()]
-
-    if from_modifiers_mandatory:
-        from_modifiers_mandatory = [
-            get_key(key)['key_code'] for key in from_modifiers_mandatory.split()
-        ]
-
-    if from_modifiers_optional:
-        from_modifiers_optional = [
-            get_key(key)['key_code'] for key in from_modifiers_optional.split()
-        ]
-
-    if isinstance(to_obj, str):
-        to_obj = [get_key(key) for key in to_obj.split()]
-
-    if to_modifiers:
-        to_modifiers = [get_key(key)['key_code'] for key in to_modifiers.split()]
-
     result = {
         'type': 'basic',
     }
@@ -252,28 +274,53 @@ def convert_manipulator_tuple(manipulator):
     if conditions:
         result['conditions'] = conditions
 
-    if len(from_keys) > 1:
-        result['from'] = {'simultaneous': from_keys}
+    from_keys_list = [get_key(key) for key in from_keys.split()]
+    if len(from_keys_list) > 1:
+        result['from'] = {'simultaneous': from_keys_list}
     else:
-        result['from'] = from_keys[0].copy()
+        result['from'] = from_keys_list[0].copy()
 
     if from_modifiers_mandatory or from_modifiers_optional:
         result['from']['modifiers'] = {}
         if from_modifiers_mandatory:
-            result['from']['modifiers']['mandatory'] = from_modifiers_mandatory
+            result['from']['modifiers']['mandatory'] = [
+                get_key(key)['key_code'] for key in from_modifiers_mandatory.split()
+            ]
         if from_modifiers_optional:
-            result['from']['modifiers']['optional'] = from_modifiers_optional
+            result['from']['modifiers']['optional'] = [
+                get_key(key)['key_code'] for key in from_modifiers_optional.split()
+            ]
 
-    if isinstance(to_obj, list):
-        if to_obj:
-            result['to'] = [o.copy() for o in to_obj]
-        else:
+    if isinstance(to_obj, str):
+        if to_obj == '':
             result['to'] = [{}]
+        else:
+            result['to'] = [get_key(to_obj)]
+
     elif isinstance(to_obj, dict):
         result['to'] = [to_obj.copy()]
 
+    elif isinstance(to_obj, list):
+        result['to'] = []
+        for to_item in to_obj:
+            if isinstance(to_item, dict):
+                result['to'].append(to_item.copy())
+            else:
+                result['to'].append(get_key(to_item))
+
     if to_modifiers:
-        result['to'][0]['modifiers'] = to_modifiers
+        if isinstance(to_modifiers, str):
+            to_modifiers = [to_modifiers]
+
+        for i, to_modifiers_item in enumerate(to_modifiers):
+            if to_modifiers_item:
+                assert (
+                    len(result['to']) > i
+                ), 'The list of `to_modifiers` must not be longer than the list of `to_keys`.'
+
+                result['to'][i]['modifiers'] = [
+                    get_key(key)['key_code'] for key in to_modifiers_item.split()
+                ]
 
     if to_config:
         result['to'][-1].update(to_config)
