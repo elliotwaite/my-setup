@@ -39,6 +39,13 @@ source $ZSH_DIR/enhancd/init.sh
 source ~/code/zsh/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Key bindings for `Cmd + Left` -> `beginning-of-line` and `Cmd + Right` -> `end-of-line`.
+bindkey '\e\e[D' beginning-of-line
+bindkey '\e\e[C' end-of-line
+
+# Alias for blackd.
+alias black="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/elliotwaite/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -71,9 +78,6 @@ export ANDROID_SDK=$HOME/Library/Android/sdk
 export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
-
-# Alias for blackd.
-alias black="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
 
 # For NVM.
 export NVM_DIR="$HOME/.nvm"
