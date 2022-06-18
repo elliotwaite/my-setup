@@ -49,6 +49,9 @@ System Preferences:
         [x] Copy picture of selected area to the clipboard: Shift + Cmd + 4
       Services:
         Files and Folders
+          [ ] Open File in Skim
+          [ ] Open URL in Skim
+          [ ] Show Skim Notes
           [x] New iTerm2 Tab Here
       Spotlight:
         [ ] Show Spotlight search
