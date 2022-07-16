@@ -147,6 +147,16 @@ COMPLEX_MODIFICATIONS = [
         ],
     },
     {
+        'description': 'Keypad Keys -> Arrow Keys',
+        'manipulators': [
+            ('keypad_0', '', 'any', 'space'),
+            ('keypad_4', '', 'any', 'left'),
+            ('keypad_5', '', 'any', 'down'),
+            ('keypad_6', '', 'any', 'right'),
+            ('keypad_8', '', 'any', 'up'),
+        ],
+    },
+    {
         'description': 'PyCharm "Find in Files..." and "Replace in Files..." Hotkeys',
         'manipulators': [
             # Alt + f -> `Focus Editor`, `Find in File...`.
