@@ -43,9 +43,6 @@ source ~/code/zsh/powerlevel10k/powerlevel10k.zsh-theme
 bindkey '\e\e[D' beginning-of-line
 bindkey '\e\e[C' end-of-line
 
-# Alias for blackd.
-alias black="bash -c \"nohup sh -c 'blackd --bind-port 45484' &> /tmp/black.out\""
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/elliotwaite/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

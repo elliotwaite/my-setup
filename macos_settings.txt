@@ -84,7 +84,6 @@ System Preferences:
       QuickShade
       SmoothScroll
       Spectacle
-      start_blackd (located in this repo at /automator_apps/start_blackd.app)
   Date & Time:
     Clock > Time options > [ ] Show AM/PM
     Clock > Date options > [x] Show date
