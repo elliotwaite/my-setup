@@ -1,1 +1,0 @@
-Import the settings file "pycharm_settings.jar" (located in the same folder as this text file).

@@ -55,6 +55,9 @@ System Preferences:
           [x] New iTerm2 Tab Here
       Spotlight:
         [ ] Show Spotlight search
+      App Shortcuts:
+        All Application
+          Paste and Match Style: Shift + Cmd + V
     Input Sources:
       U.S.
       [ ] Show Input menu in menu bar

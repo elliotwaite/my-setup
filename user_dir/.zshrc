@@ -1,43 +1,21 @@
-ZSH_DIR=$HOME/code/zsh
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# Download zsh-syntax-highlighting into your ZSH_DIR:
-#   https://github.com/zsh-users/zsh-syntax-highlighting
-source $ZSH_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Download zsh-autosuggestions into your ZSH_DIR:
-#   https://github.com/zsh-users/zsh-autosuggestions
-source $ZSH_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Download zsh-completions into your ZSH_DIR:
-#   https://github.com/zsh-users/zsh-completions
-#
-# Also, download completions for nim and nimble by downloading their
-# completion files into "ZSH_DIR/zsh-completions/src". You can do this by using
-# the curl commands below, but note: if you use a different "ZSH_DIR", update
-# the "~/code/zsh" part of the commands before running them.
-#   curl https://raw.githubusercontent.com/nim-lang/Nim/devel/tools/nim.zsh-completion -o ~/code/zsh/zsh-completions/src/_nim
-#   curl https://raw.githubusercontent.com/nim-lang/nimble/master/nimble.zsh-completion -o ~/code/zsh/zsh-completions/src/_nimble
-#
-# Also, to fix the "insecure directories" error message, I had to run:
-#   compaudit | xargs chmod g-w
-# as suggested here:
-#   https://github.com/zsh-users/zsh-completions/issues/680#issuecomment-612960481
-fpath=($ZSH_DIR/zsh-completions/src $fpath)
-autoload -U compinit && compinit
-
-# Download enhancd into your ZSH_DIR:
-#   https://github.com/b4b4r07/enhancd
-#
-# Also, follow instructions to install fzy and ccat with homebrew:
-#   https://github.com/b4b4r07/enhancd#bash
-source $ZSH_DIR/enhancd/init.sh
-
-# Download powerlevel10k into the ZSH_DIR:
-#   https://github.com/romkatv/powerlevel10k
-#
-# Configure p10k by runing `p10k configure` or edit ~/.p10k.zsh.
-source ~/code/zsh/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ----------------------------------------------------------------------------#
+#                                                                             #
+#   MY CUSTOM SETTINGS                                                        #
+#                                                                             #
+# ----------------------------------------------------------------------------#
 
 # Key bindings for `Cmd + Left` -> `beginning-of-line` and `Cmd + Right` -> `end-of-line`.
 bindkey '\e\e[D' beginning-of-line
@@ -56,6 +34,10 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/Users/elliotwaite/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/elliotwaite/mambaforge/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 # For user bin.
@@ -81,8 +63,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# The next line updates PATH for the Google Cloud SDK.
+# For Google Cloud SDK. The first line updates PATH for the Google Cloud SDK. The second line enables shell command completion for gcloud.
 if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
 if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/completion.zsh.inc'; fi
+
+# For Timestream app (requires: npm i -g sync-directory).
+alias watcher='syncdir /Users/elliotwaite/code/repos/timestream-next/src /Users/elliotwaite/code/repos/timestream-expo/src -w -do'
+
+# ----------------------------------------------------------------------------#
+#                                                                             #
+#                                                                             #
+#                                                                             #
+# ----------------------------------------------------------------------------#
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
