@@ -144,6 +144,8 @@ COMPLEX_MODIFICATIONS = [
             ('i', 'r_cmd', 'any', 'i', 'cmd alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
             # Alt + f -> Toggle full sreen mode (View > Enter/Exit Full Screen).
             ('f', 'l_alt', 'any', 'f', 'cmd ctrl', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
+            # Swith to recent tab (used with Chrome extension: Recent Tabs).
+            ('tab', 'l_alt', 'any', 't', 'alt', IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME),
         ],
     },
     {
@@ -163,7 +165,7 @@ COMPLEX_MODIFICATIONS = [
             (
                 'f',
                 'l_alt',
-                'any',
+                '',
                 ['e', 'f'],
                 ['cmd alt ctrl shift', 'cmd alt ctrl shift'],
                 IF_FRONT_APPLICATION_IS_PYCHARM,
@@ -173,7 +175,7 @@ COMPLEX_MODIFICATIONS = [
             (
                 'f',
                 'l_ctrl',
-                'any',
+                '',
                 ['e', 'r'],
                 ['cmd alt ctrl shift', 'cmd alt ctrl shift'],
                 IF_FRONT_APPLICATION_IS_PYCHARM,
