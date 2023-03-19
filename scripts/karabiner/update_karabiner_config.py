@@ -159,7 +159,7 @@ COMPLEX_MODIFICATIONS = [
         ],
     },
     {
-        'description': 'PyCharm "Find in Files..." and "Replace in Files..." Hotkeys',
+        'description': 'PyCharm Hotkeys',
         'manipulators': [
             # Alt + f -> `Focus Editor`, `Find in File...`.
             (
@@ -178,6 +178,18 @@ COMPLEX_MODIFICATIONS = [
                 '',
                 ['e', 'r'],
                 ['cmd alt ctrl shift', 'cmd alt ctrl shift'],
+                IF_FRONT_APPLICATION_IS_PYCHARM,
+                {'repeat': False},
+            ),
+            # Cmd + s -> `Save All`, `Run Tailwind Formatter`.
+            # Note: For some reason, trying to run `Run Tailwind Formatter`
+            # first doesn't work. So, we instead run `Save All` first.
+            (
+                's',
+                'l_cmd',
+                '',
+                ['s', 'h'],
+                ['alt', 'ctrl shift'],
                 IF_FRONT_APPLICATION_IS_PYCHARM,
                 {'repeat': False},
             ),
