@@ -43,6 +43,13 @@ fi
 # For user bin.
 export PATH=$PATH:$HOME/bin
 
+# For Rust.
+. "$HOME/.cargo/env"
+
+# For Volta.
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # For Nim.
 export PATH=$PATH:$HOME/.nimble/bin
 
@@ -58,14 +65,13 @@ export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
 
-# For NVM.
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # For Google Cloud SDK. The first line updates PATH for the Google Cloud SDK. The second line enables shell command completion for gcloud.
 if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elliotwaite/sdks/google-cloud-sdk/completion.zsh.inc'; fi
+
+# For tauri-mobile. Specifies the Android SDK installation directory.
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export NDK_HOME=$HOME/Library/Android/sdk/ndk/25.2.9519653
 
 # For Timestream app (requires: npm i -g sync-directory).
 alias watcher='syncdir /Users/elliotwaite/code/repos/timestream-next/src /Users/elliotwaite/code/repos/timestream-expo/src -w -do'
