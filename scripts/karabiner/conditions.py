@@ -38,6 +38,7 @@ IF_FRONT_APPLICATION_IS_PYCHARM = [
         "type": "frontmost_application_if",
         "bundle_identifiers": [
             r"^com\.jetbrains\.pycharm$",
+            r"^com\.jetbrains\.pycharm-EAP$",
         ],
     }
 ]
