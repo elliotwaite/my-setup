@@ -77,6 +77,13 @@ bindkey '\e\e[C' end-of-line # Cmd + Right -> end-of-line.
 # Adds ~/bin to PATH:
 export PATH=$PATH:$HOME/bin
 
+# Alias for PNPM:
+alias p=pnpm
+
+# For Deno:
+export DENO_INSTALL="/Users/elliotwaite/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # For Tauri mobile:
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -98,11 +105,8 @@ if [ -f '/Users/elliotwaite/sdks/google-cloud-sdk/completion.zsh.inc' ]; then . 
 # For Nim:
 export PATH=$PATH:$HOME/.nimble/bin
 
-# Alias for PNPM:
-alias p=pnpm
-
-# Alias for running the Timestream file watcher (requires: npm i -g sync-directory):
-alias watcher='syncdir /Users/elliotwaite/code/repos/timestream-next/src /Users/elliotwaite/code/repos/timestream-expo/src -w -do'
+# For Frum (Ruby version manager):
+eval "$(frum init)"
 
 # ----------------------------------------------------------------------------#
 #                                                                             #
