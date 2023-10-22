@@ -91,6 +91,8 @@ COMPLEX_MODIFICATIONS = [
     {
         "description": "Left Cmd/Alt + Right Hand Keys -> Navigation",
         "manipulators": [
+            # y
+            ("y", "l_cmd", "any", "y", "alt ctrl cmd"),
             # u
             ("u", "l_cmd", "any", "left", "alt"),
             # i
@@ -100,6 +102,8 @@ COMPLEX_MODIFICATIONS = [
             ("i", "l_alt", "any", "up", "cmd"),
             # o
             ("o", "l_cmd", "any", "right", "alt"),
+            # p
+            ("p", "l_cmd", "any", "p", "alt ctrl cmd"),
             # h
             ("h", "l_cmd", "any", "left", "cmd"),
             # j
