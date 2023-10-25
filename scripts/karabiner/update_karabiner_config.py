@@ -155,12 +155,12 @@ COMPLEX_MODIFICATIONS = [
         "description": "Browser Hotkeys",
         "manipulators": [
             # Open a new Brave tab.
-            (
-                "esc",
-                "l_cmd",
-                "any",
-                apple_script_shell_command(OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT),
-            ),
+            # (
+            #     "esc",
+            #     "l_cmd",
+            #     "any",
+            #     apple_script_shell_command(OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT),
+            # ),
             # Cmd + 1 -> Show JavaScript console (View > Developer > JavaScript Console).
             (
                 "1",
