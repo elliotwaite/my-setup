@@ -1,0 +1,24 @@
+General
+    [x] Show in menu bar instead of Doc
+    [x] Launch at login
+    [x] Hide menu bar icon
+    When clicking menu bar icon: Show menu
+    [x] Stay on top
+    [x] Copy color in preferred format after picking
+
+Color
+    Preferred color format: Hex
+    Shown color formats: [x] Hex, [x] HSL, [x] RGB, [x] LCH
+    [ ] Uppercase Hex color
+    [ ] Prefix Hex color with #
+    [ ] Use legacy syntax for HSL and RGB
+
+Shortcuts
+    Pick color: alt + cmd + 3
+    Toggle window: [none]
+
+Advanced
+    [ ] Show color sampler when opening window
+    [ ] Use larger text in text fields
+    [ ] Show accessibility color name
+    Sticky palette: None
