@@ -25,20 +25,20 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/elliotwaite/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/elliotwaite/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/elliotwaite/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/elliotwaite/mambaforge/etc/profile.d/conda.sh"
+    if [ -f "/Users/elliotwaite/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/elliotwaite/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/elliotwaite/mambaforge/bin:$PATH"
+        export PATH="/Users/elliotwaite/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/Users/elliotwaite/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/elliotwaite/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/Users/elliotwaite/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/elliotwaite/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
@@ -77,12 +77,16 @@ bindkey '\e\e[C' end-of-line # Cmd + Right -> end-of-line.
 # Adds ~/bin to PATH:
 export PATH=$PATH:$HOME/bin
 
-# Alias for PNPM:
-alias p=pnpm
+# For Cursor:
+# export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/Cursor.app/Contents/Resources/app/bin"
+
+# For Docker:
+export PATH=$PATH:$HOME/.docker/bin
 
 # For Deno:
-export DENO_INSTALL="/Users/elliotwaite/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+export DENO_INSTALL=/Users/elliotwaite/.deno
+export PATH=$PATH:$DENO_INSTALL/bin
 
 # For Tauri mobile:
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
@@ -107,6 +111,24 @@ export PATH=$PATH:$HOME/.nimble/bin
 
 # For Frum (Ruby version manager):
 eval "$(frum init)"
+
+# Alias for PNPM:
+alias p=pnpm
+alias pup="curl -fsSL https://get.pnpm.io/install.sh | sh -"
+alias dev='pnpm run dev'
+alias dev-live='pnpm run dev-live'
+
+# Alias for Supabase:
+alias s="npx supabase"
+
+# Alias for astra-app project:
+alias d="(cd app && dev)"
+
+# Aliases for Rust development:
+alias bac='bacon'
+
+# Alias for running the Timestream file watcher (requires: npm i -g sync-directory):
+alias watcher='syncdir /Users/elliotwaite/code/repos/timestream-next/src /Users/elliotwaite/code/repos/timestream-expo/src -w -do'
 
 # ----------------------------------------------------------------------------#
 #                                                                             #
