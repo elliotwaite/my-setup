@@ -19,10 +19,11 @@ For the full list of available key names that can be mapped from/to, see:
 import json
 from pathlib import Path
 
-from apple_scripts import apple_script_shell_command, OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT
+from apple_scripts import OPEN_NEW_BRAVE_TAB_APPLE_SCRIPT, apple_script_shell_command
 from conditions import (
     IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD,
     IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
+    IF_FRONT_APPLICATION_IS_BRAVE_CHROME_FIREFOX_SAFARI_OR_EDGE,
     IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME,
     IF_FRONT_APPLICATION_IS_PYCHARM,
 )
@@ -120,10 +121,11 @@ COMPLEX_MODIFICATIONS = [
         ],
     },
     {
-        "description": "Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick",
+        "description": "Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick, Caps Lock -> Esc",
         "manipulators": [
             ("`", "cmd", "any", "`", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
             ("`", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
+            ("caps_lock", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
         ],
     },
     {
@@ -146,7 +148,23 @@ COMPLEX_MODIFICATIONS = [
                 "",
                 IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
             ),
-            # # Mapping buttons 4 and 5 (forward and back navigation).
+            # Mapping buttons 4 and 5 (forward and back navigation).
+            (
+                "button4",
+                "l_cmd",
+                "any",
+                "[",
+                "cmd",
+                IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
+            ),
+            (
+                "button4",
+                "l_shift",
+                "any",
+                "[",
+                "cmd",
+                IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C,
+            ),
             ("button4", "", "any", "]", "cmd", IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
             ("button5", "", "any", "[", "cmd", IF_DEVICE_IS_EVOLUENT_VERTICAL_MOUSE_C),
         ],
@@ -177,9 +195,9 @@ COMPLEX_MODIFICATIONS = [
                 "any",
                 "i",
                 "cmd alt",
-                IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME,
+                IF_FRONT_APPLICATION_IS_BRAVE_CHROME_FIREFOX_SAFARI_OR_EDGE,
             ),
-            # Alt + f -> Toggle full sreen mode (View > Enter/Exit Full Screen).
+            # Alt + f -> Toggle full screen mode (View > Enter/Exit Full Screen).
             (
                 "f",
                 "l_alt",
@@ -188,7 +206,7 @@ COMPLEX_MODIFICATIONS = [
                 "cmd ctrl",
                 IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME,
             ),
-            # Swith to recent tab (used with Chrome extension: Recent Tabs).
+            # Switch to recent tab (used with Chrome extension: Recent Tabs).
             (
                 "tab",
                 "l_alt",

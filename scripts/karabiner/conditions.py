@@ -33,6 +33,19 @@ IF_FRONT_APPLICATION_IS_BRAVE_OR_CHROME = [
     }
 ]
 
+IF_FRONT_APPLICATION_IS_BRAVE_CHROME_FIREFOX_SAFARI_OR_EDGE = [
+    {
+        "type": "frontmost_application_if",
+        "bundle_identifiers": [
+            r"^com\.brave\.Browser$",
+            r"^com\.google\.Chrome$",
+            r"^org\.mozilla\.firefox$",
+            r"^com\.apple\.Safari$",
+            r"^com\.microsoft\.edgemac$",
+        ],
+    }
+]
+
 IF_FRONT_APPLICATION_IS_PYCHARM = [
     {
         "type": "frontmost_application_if",
