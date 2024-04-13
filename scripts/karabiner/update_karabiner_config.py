@@ -16,6 +16,7 @@ be specified below.
 For the full list of available key names that can be mapped from/to, see:
   ./key_map.py
 """
+
 import json
 from pathlib import Path
 
@@ -116,6 +117,8 @@ COMPLEX_MODIFICATIONS = [
             ("k", "l_alt", "any", "down", "cmd"),
             # l
             ("l", "l_cmd", "any", "right", ""),
+            # ;
+            (";", "l_cmd", "any", "right", "cmd"),
             # '
             ("'", "l_cmd", "any", "right", "cmd"),
         ],
