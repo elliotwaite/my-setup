@@ -1,9 +1,11 @@
-I use this app to set up custom snap areas for window positioning, and to customize the touch bar.
+I use this app to set up custom snap areas for window positioning, to
+customize the touch bar, and to create custom trackpad gestures.
 
 Basic Settings > [x] Launch BetterTouchTool on startup
 
 Gestures/Triggers
-  TouchBar:
+
+  Touch Bar:
 
     TouchBar Button:
       Name: Esc
@@ -24,3 +26,18 @@ Gestures/Triggers
       Item Placement: Stick to the right side of the Touch Bar
       Knob Icon: (use a transparent image)
       [ ] Draw Knob Background
+
+  Trackpad:
+
+    3 Finger Swipe Up: Mission Control
+    3 Finger Swipe Down: Application Expose
+    3 Finger Swipe Left: Resize window to Left Two Thirds
+    3 Finger Swipe Right: Resize window to Right Third
+    4 Finger Swipe Up: Maximize Window
+    4 Finger Swipe Left: Maximize Window Left
+    4 Finger Swipe Right: Maximize Window Right
+
+  Keyboard Shortcuts
+
+    F1: Brightness Down
+    F2: Brightness Up
