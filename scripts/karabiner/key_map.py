@@ -4,11 +4,11 @@ The keys below are ordered to stay in sync with:
 https://github.com/pqrs-org/Karabiner-Elements/blob/main/src/apps/PreferencesWindow/Resources/simple_modifications.json
 (This file was last compared with that file on Feb 23, 2022.)
 
-When both the key and the value are strings, the key is just a shorhand for
+When both the key and the value are strings, the key is just a shorthand for
 that value, so either the key string or the value string can be used.
 
 The commented out key names are for keys that don't have a shorthand
-alternative. For exmaple, "caps_lock" doesn't have a shorthand, so it can be
+alternative. For example, "caps_lock" doesn't have a shorthand, so it can be
 used as-is by just using the string "caps_lock".
 
 All string values in the key map are for key codes.
