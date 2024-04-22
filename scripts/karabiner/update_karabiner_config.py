@@ -121,9 +121,8 @@ COMPLEX_MODIFICATIONS = [
             (";", "l_cmd", "any", "right", "cmd"),
             # '
             ("'", "l_cmd", "any", "right", "cmd"),
-            # shift + space -> _
-            ("space", "l_shift", "", "-", "shift"),
-            ("space", "r_shift", "", "-", "shift"),
+            # page_down -> _
+            ("page_down", "", "", "-", "shift"),
         ],
     },
     {
