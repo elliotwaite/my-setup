@@ -75,6 +75,9 @@ export PATH="$PATH:$BUN_INSTALL/bin"
 # For Docker:
 export PATH="$PATH:$HOME/.docker/bin"
 
+# For Postgres libpq CLI tools (to install, run: brew install libpq):
+export PATH="$PATH:/usr/local/opt/libpq/bin"
+
 # Aliases for Pixi:
 # alias p="pixi"
 alias pixup="pixi self-update"
