@@ -120,9 +120,15 @@ COMPLEX_MODIFICATIONS = [
             # ;
             (";", "l_cmd", "any", "right", "cmd"),
             # '
-            ("'", "l_cmd", "any", "right", "cmd"),
-            # page_down -> _
-            ("page_down", "", "", "-", "shift"),
+            ("space", "l_shift", "any", "-", "shift"),
+            # left cmd + up -> alt + cmd + shift + up
+            ("up", "l_cmd", "any", "up", "alt cmd"),
+            # left cmd + down -> alt + cmd + shift + down
+            ("down", "l_cmd", "any", "down", "alt cmd"),
+            # left cmd + left shift + up -> alt + cmd + shift + up
+            ("up", "l_cmd l_shift", "any", "up", "alt cmd shift"),
+            # left cmd + left shift + down -> alt + cmd + shift + down
+            ("down", "l_cmd l_shift", "any", "down", "alt cmd shift"),
         ],
     },
     {
