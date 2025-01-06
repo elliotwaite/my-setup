@@ -1,0 +1,35 @@
+This keyboard layout is the standard macOS "U.S." keyboard layout, but with all
+the "alternate" keys disabled, meaning that pressing `alt + some_key` will
+output `some_key` instead of some alternative character, and most importantly,
+none of the `alt + some_key` mappings will map to a dead key which prevents that
+`alt + some_key` combo from being used as a keybinding in IDEs.
+
+I created the "U.S. (without alternate keys)" keyboard layout by downloading and
+installing Ukelele (https://software.sil.org/ukelele/) and then following these
+steps:
+1. Set the current macOS keyboard layout to "U.S.".
+2. Open Ukelele and select: File > New From Current Input Source
+3. Changed all the "alternative" keys (the keys that are shown when the alt key
+   is held down) to be the same key as when alt is not held down, and change all
+   dead keys to output keys.
+4. Select: File > Save...
+   - Save as: U.S. (without alternate keys).bundle
+   - Where: ~/Library/KeyboardLayouts/
+   - Click "Save"
+
+Or you can install it by copying the the bundle file in this repo to
+`~/Library/Keyboard Layouts/`.
+
+After the bundle file is installed, you may need to log out and log back in
+before you are able to select the keyboard layout.
+
+To select the keyboard layout:
+
+1. Go to: System Settings > Keyboard > Text Input > Input Sources > and click
+   "Edit...".
+2. Click the "+" button in the bottom right corner of the window.
+3. Select "English" (the top item) from the left menu, and "U.S. (without
+   alternate keys)" from the right menu.
+4. Click "Add".
+5. Click "Done".
+6. And then select the keyboard layout from the top macOS menu bar.
