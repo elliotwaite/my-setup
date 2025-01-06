@@ -120,7 +120,7 @@ COMPLEX_MODIFICATIONS = [
             # ;
             (";", "l_cmd", "any", "right", "cmd"),
             # '
-            ("space", "l_shift", "any", "-", "shift"),
+            ("'", "l_cmd", "any", "right", "cmd"),
             # left cmd + up -> alt + cmd + shift + up
             ("up", "l_cmd", "any", "up", "alt cmd"),
             # left cmd + down -> alt + cmd + shift + down
