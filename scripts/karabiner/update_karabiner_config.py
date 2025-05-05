@@ -101,6 +101,7 @@ COMPLEX_MODIFICATIONS = [
             ("i", "l_cmd r_shift", "any", "up", "shift"),
             ("i", "l_cmd l_shift", "any", "up", "cmd shift"),
             ("i", "l_cmd", "any", "up", ""),
+            ("i", "l_alt shift", "any", "up", "alt shift"),
             ("i", "l_alt", "any", "up", "cmd"),
             # o
             ("o", "l_cmd", "any", "right", "alt"),
@@ -114,6 +115,7 @@ COMPLEX_MODIFICATIONS = [
             ("k", "l_cmd r_shift", "any", "down", "shift"),
             ("k", "l_cmd l_shift", "any", "down", "cmd shift"),
             ("k", "l_cmd", "any", "down", ""),
+            ("k", "l_alt l_shift", "any", "down", "alt shift"),
             ("k", "l_alt", "any", "down", "cmd"),
             # l
             ("l", "l_cmd", "any", "right", ""),
