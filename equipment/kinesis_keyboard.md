@@ -38,7 +38,7 @@ program_key_lock=OFF
 [pause]>[vol+]
 [delete]>[enter]
 [end]>[space]
-[home]>[F13]
+[home]>[lctrl]
 [caps]>[escape]
 ```
 
