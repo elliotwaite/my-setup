@@ -91,6 +91,24 @@ SIMPLE_MODIFICATIONS = [
 
 COMPLEX_MODIFICATIONS = [
     {
+        "description": "Kinesis Style Remaps",
+        "manipulators": [
+            # `
+            ("`", "l_cmd", "any", "`", ""),
+            ("`", "", "any", "=", ""),
+            # 9
+            ("9", "l_cmd", "any", "[", ""),
+            # 0
+            ("0", "l_cmd", "any", "]", ""),
+            # .
+            (".", "l_cmd", "any", "[", ""),
+            # /
+            ("/", "l_cmd", "any", "]", ""),
+            # cmd + space -> enter
+            ("space", "l_cmd", "any", "enter", ""),
+        ],
+    },
+    {
         "description": "Left Cmd/Alt + Right Hand Keys -> Navigation",
         "manipulators": [
             # y
@@ -133,14 +151,14 @@ COMPLEX_MODIFICATIONS = [
             ("down", "l_cmd l_shift", "any", "down", "alt cmd shift"),
         ],
     },
-    {
-        "description": "Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick, Caps Lock -> Esc",
-        "manipulators": [
-            ("`", "cmd", "any", "`", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
-            ("`", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
-            ("caps_lock", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
-        ],
-    },
+    # {
+    #     "description": "Touch Bar Keyboard: Backtick -> Esc, Cmd + Backtick -> Backtick, Caps Lock -> Esc",
+    #     "manipulators": [
+    #         ("`", "cmd", "any", "`", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
+    #         ("`", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
+    #         ("caps_lock", "", "any", "esc", "", IF_DEVICE_IS_APPLE_INTERNAL_KEYBOARD),
+    #     ],
+    # },
     {
         "description": "Evoluent Mouse Button Swaps (2 <-> 3, 4 <-> 5)",
         "manipulators": [
@@ -412,9 +430,9 @@ def convert_manipulator_tuple(manipulator):
 
         for i, to_modifiers_item in enumerate(to_modifiers):
             if to_modifiers_item:
-                assert (
-                    len(result["to"]) > i
-                ), "The list of `to_modifiers` must not be longer than the list of `to_keys`."
+                assert len(result["to"]) > i, (
+                    "The list of `to_modifiers` must not be longer than the list of `to_keys`."
+                )
 
                 result["to"][i]["modifiers"] = [
                     get_key(key)["key_code"] for key in to_modifiers_item.split()
